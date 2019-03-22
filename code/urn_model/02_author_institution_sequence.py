@@ -19,5 +19,5 @@ if __name__ == '__main__':
             authorId_sequence.append(authorId)
             affId_sequence.append(affId)
 
-    save_pkl_file(directory_urn_model, 'affId_sequence', authorId_sequence)
+    save_pkl_file(directory_urn_model, 'authorId_sequence', authorId_sequence)
     save_pkl_file(directory_urn_model, 'affId_sequence', affId_sequence)

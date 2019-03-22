@@ -5,7 +5,7 @@ from utils.pkl_io import open_pkl_file, save_pkl_file
 from utils.entity_io import open_paper
 
 if __name__ == '__main__':
-    paperIds = open_pkl_file(directory_data, 'papers').paperIds
+    paperIds = open_pkl_file(directory_dataset_description, 'paperIds')
     paperId_date = []
     length = len(paperIds)
 
@@ -17,7 +17,6 @@ if __name__ == '__main__':
         num += 1
         if num % 1000 == 0:
             print(num, length)
-
 
     paperId_date.sort(key=lambda x: x[1])
     save_pkl_file(directory_dataset_description, 'paperId_date', paperId_date)
