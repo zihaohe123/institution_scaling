@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="244e1e0a-94ea-4eaa-a0c8-46a93af98ef1" name="Default Changelist" comment="" />
+    <list default="true" id="244e1e0a-94ea-4eaa-a0c8-46a93af98ef1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/urn_model/02_author_institution_sequence.py" beforeDir="false" afterPath="$PROJECT_DIR$/urn_model/02_author_institution_sequence.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,8 +66,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/urn_model/02_author_institution_sequence.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="304">
+              <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -88,6 +90,9 @@
     <findStrings>
       <find>size</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -152,6 +157,7 @@
     <option name="width" value="3266" />
     <option name="height" value="2106" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -178,6 +184,11 @@
               <item name="code" type="b2602c69:ProjectViewProjectNode" />
               <item name="code" type="462c0819:PsiDirectoryNode" />
               <item name="entities" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="urn_model" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -313,11 +324,12 @@
       <workItem from="1553085238562" duration="34861000" />
       <workItem from="1553174441261" duration="18782000" />
       <workItem from="1553242114488" duration="17035000" />
+      <workItem from="1553268227070" duration="64000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73821000" />
+    <option name="totallyTimeSpent" value="73885000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -332,7 +344,7 @@
     <frame x="-6" y="-6" width="1633" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17396826" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17587301" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -386,27 +398,13 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/05_scaling_with_institution_size/09_productivity_cross.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/05_scaling_with_institution_size/10_impact_cross.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/05_scaling_with_institution_size/11_impact_oneauthor_cross.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/05_scaling_with_institution_size/12_impact_twoauthor_cross.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/05_scaling_with_institution_size/14_impact_onetwoauthor_cross.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/05_scaling_with_institution_size/15_impact_three2sixauthor_cross.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/05_scaling_with_institution_size/13_impact_threeauthor_cross.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/05_scaling_with_institution_size/09_productivity_cross.py" />
+    <entry file="file://$PROJECT_DIR$/05_scaling_with_institution_size/10_impact_cross.py" />
+    <entry file="file://$PROJECT_DIR$/05_scaling_with_institution_size/11_impact_oneauthor_cross.py" />
+    <entry file="file://$PROJECT_DIR$/05_scaling_with_institution_size/12_impact_twoauthor_cross.py" />
+    <entry file="file://$PROJECT_DIR$/05_scaling_with_institution_size/14_impact_onetwoauthor_cross.py" />
+    <entry file="file://$PROJECT_DIR$/05_scaling_with_institution_size/15_impact_three2sixauthor_cross.py" />
+    <entry file="file://$PROJECT_DIR$/05_scaling_with_institution_size/13_impact_threeauthor_cross.py" />
     <entry file="file://$PROJECT_DIR$/05_scaling_within_other_properties/02_impact-internal_collab.py" />
     <entry file="file://$PROJECT_DIR$/05_scaling_within_other_properties/01_impact-indiv_collab.py" />
     <entry file="file://$PROJECT_DIR$/06_scaling_with_collaborations/01_impact_oneauthor-avg_internal_collab_cross.py">
@@ -418,27 +416,17 @@
     <entry file="file://$PROJECT_DIR$/06_scaling_with_collaborations/05_impact_twoauthor-avg_external_indiv_collab_cross.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/06_scaling_with_collaborations/04_impact_oneauthor-avg_external_indiv_collab_within.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/06_scaling_with_collaborations/04_impact_oneauthor-avg_external_indiv_collab_within.py" />
     <entry file="file://$PROJECT_DIR$/06_scaling_with_collaborations/04_impact_oneauthor-avg_external_indiv_collab_cross.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/06_scaling_with_collaborations/03_impact_three2sixauthor-avg_internal_collab_within.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/06_scaling_with_collaborations/03_impact_three2sixauthor-avg_internal_collab_within.py" />
     <entry file="file://$PROJECT_DIR$/06_scaling_with_collaborations/03_impact_three2sixauthor-avg_internal_collab_cross.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/06_scaling_with_collaborations/02_impact_twoauthor-avg_internal_collab_within.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/06_scaling_with_collaborations/01_impact_oneauthor-avg_internal_collab_within.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/06_scaling_with_collaborations/05_impact_twoauthor-avg_external_indiv_collab_within.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/06_scaling_with_collaborations/02_impact_twoauthor-avg_internal_collab_within.py" />
+    <entry file="file://$PROJECT_DIR$/06_scaling_with_collaborations/01_impact_oneauthor-avg_internal_collab_within.py" />
+    <entry file="file://$PROJECT_DIR$/06_scaling_with_collaborations/05_impact_twoauthor-avg_external_indiv_collab_within.py" />
     <entry file="file://$PROJECT_DIR$/06_scaling_with_collaborations/06_impact_three2sixauthor-avg_external_indiv_collab_cross.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -449,13 +437,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/05_scaling_with_institution_size/01_internal_collab_within.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" selection-start-line="10" selection-end-line="64" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/05_scaling_with_institution_size/01_internal_collab_within.py" />
     <entry file="file://$PROJECT_DIR$/utils/excel_io.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="701">
@@ -500,13 +482,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/05_scaling_with_institution_size/01_internal_collab_cross.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/05_scaling_with_institution_size/01_internal_collab_cross.py" />
     <entry file="file://$PROJECT_DIR$/utils/directories.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
@@ -517,37 +493,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/05_scaling_with_institution_size/01_internal_collab.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" lean-forward="true" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/05_scaling_with_institution_size/02_external_inst_collab.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="31" lean-forward="true" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/05_scaling_with_institution_size/03_external_indiv_collab.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" lean-forward="true" selection-start-line="4" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/05_scaling_with_institution_size/04_indiv_collab.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" lean-forward="true" selection-start-line="4" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/05_scaling_with_institution_size/05_avg_teamsize.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/05_scaling_with_institution_size/01_internal_collab.py" />
+    <entry file="file://$PROJECT_DIR$/05_scaling_with_institution_size/02_external_inst_collab.py" />
+    <entry file="file://$PROJECT_DIR$/05_scaling_with_institution_size/03_external_indiv_collab.py" />
+    <entry file="file://$PROJECT_DIR$/05_scaling_with_institution_size/04_indiv_collab.py" />
+    <entry file="file://$PROJECT_DIR$/05_scaling_with_institution_size/05_avg_teamsize.py" />
     <entry file="file://$PROJECT_DIR$/entities/affiliation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="759">
@@ -625,6 +575,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/03_institution_modeling/01_affiliation_papers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="27" column="56" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03_institution_modeling/02_affiliation_construction.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/urn_model/shuffle.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
@@ -642,20 +602,10 @@
     <entry file="file://$PROJECT_DIR$/entities/paper.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/03_institution_modeling/02_affiliation_construction.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/03_institution_modeling/01_affiliation_papers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="27" column="56" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/urn_model/02_author_institution_sequence.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="304">
+          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
         </state>
       </provider>
     </entry>

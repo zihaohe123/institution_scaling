@@ -12,5 +12,7 @@ for paperId in paperId_date:
     for author in paper.authors:
         authorId = author.authorId
         affId = author.affId
-        if
+        if authorId in authorIds:
+            continue
+
 
