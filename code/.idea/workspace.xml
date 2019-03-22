@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="244e1e0a-94ea-4eaa-a0c8-46a93af98ef1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/06_scaling_with_collaborations/01_impact_oneauthor-avg_internal_collab_cross.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/06_scaling_with_collaborations/02_impact_twoauthor-avg_internal_collab_cross.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/06_scaling_with_collaborations/03_impact_three2sixauthor-avg_internal_collab_cross.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/06_scaling_with_collaborations/04_impact_oneauthor-avg_external_indiv_collab_cross.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/06_scaling_with_collaborations/05_impact_twoauthor-avg_external_indiv_collab_cross.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/06_scaling_with_collaborations/06_impact_three2sixauthor-avg_external_indiv_collab_cross.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/urn_model/02_author_institution_sequence.py" beforeDir="false" afterPath="$PROJECT_DIR$/urn_model/02_author_institution_sequence.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/directories.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/directories.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,8 +46,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/urn_model/02_author_institution_sequence.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="399">
+              <caret line="21" column="74" selection-start-line="21" selection-start-column="74" selection-end-line="21" selection-end-column="74" />
             </state>
           </provider>
         </entry>
@@ -354,12 +346,12 @@
       <workItem from="1553085238562" duration="34861000" />
       <workItem from="1553174441261" duration="18782000" />
       <workItem from="1553242114488" duration="17035000" />
-      <workItem from="1553268227070" duration="3313000" />
+      <workItem from="1553268227070" duration="3617000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77134000" />
+    <option name="totallyTimeSpent" value="77438000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -616,13 +608,6 @@
     <entry file="file://$PROJECT_DIR$/urn_model/01_cumul_instutions-cumul_researchers.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/urn_model/01_paperId_date.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="10" selection-start-column="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/linear_regression.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -647,10 +632,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/urn_model/01_paperId_date.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="10" selection-start-column="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/urn_model/02_author_institution_sequence.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="399">
+          <caret line="21" column="74" selection-start-line="21" selection-start-column="74" selection-end-line="21" selection-end-column="74" />
         </state>
       </provider>
     </entry>
