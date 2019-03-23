@@ -1,6 +1,7 @@
 #########################################################################
 # pre-requisite functions:
 import numpy as np
+import math
 
 
 def randomize_globally(sequence):
@@ -29,9 +30,11 @@ def record_entropy(sequence, institute):
         return 0
     bins = range(min(event_pos), len(sequence), k)
     events_per_bin = np.histogram(event_pos, bins)
-    probability = events_per_bin / k
-    entropy = np.sum(probability * np.log(probability))
-    norm_entropy = entropy / np.log(k)
+    # probability = events_per_bin / k
+    probability = [each / k for each in events_per_bin]
+    print(probability)
+    entropy = np.sum([each * math.log(each) for each in probability])
+    norm_entropy = entropy / math.log(k)
     return [k, norm_entropy]
 
 
