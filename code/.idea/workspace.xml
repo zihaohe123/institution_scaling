@@ -4,11 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/urn_model/05_mean_entropy.py" description="    affId_sequence = open_pkl_file(directory_urn_m..." line="7" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="244e1e0a-94ea-4eaa-a0c8-46a93af98ef1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/utils/traverse_paper_entity.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/urn_model/01_authorId_sequence&amp;affId_sequence.py" beforeDir="false" afterPath="$PROJECT_DIR$/urn_model/01_authorId_sequence&amp;affId_sequence.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/urn_model/02_author_institution_sequence.py" beforeDir="false" afterPath="$PROJECT_DIR$/urn_model/02_author_institution_sequence.py" afterDir="false" />
-    </list>
+    <list default="true" id="244e1e0a-94ea-4eaa-a0c8-46a93af98ef1" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,8 +46,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/urn_model/02_author_institution_sequence.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="24" column="59" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
+            <state relative-caret-position="35">
+              <caret line="2" column="3" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -352,12 +348,12 @@
       <workItem from="1553174441261" duration="18782000" />
       <workItem from="1553242114488" duration="17035000" />
       <workItem from="1553268227070" duration="17395000" />
-      <workItem from="1553428529812" duration="3286000" />
+      <workItem from="1553428529812" duration="4070000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94502000" />
+    <option name="totallyTimeSpent" value="95286000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -372,7 +368,7 @@
     <frame x="-6" y="-6" width="1633" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16761905" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1231746" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -388,7 +384,7 @@
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.5173536" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="13" visible="true" weight="0.34164858" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="13" visible="true" weight="0.3329718" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -668,8 +664,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/urn_model/02_author_institution_sequence.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="24" column="59" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
+        <state relative-caret-position="35">
+          <caret line="2" column="3" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
         </state>
       </provider>
     </entry>
