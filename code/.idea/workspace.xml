@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="244e1e0a-94ea-4eaa-a0c8-46a93af98ef1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/urn_model/pkl_file_example.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/urn_model/01_paperId_date.py" beforeDir="false" afterPath="$PROJECT_DIR$/urn_model/01_authorId_sequence&amp;affId_sequence.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/urn_model/02_author_institution_sequence.py" beforeDir="false" afterPath="$PROJECT_DIR$/urn_model/02_author_institution_sequence.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/urn_model/03_Heap's_law.py" beforeDir="false" afterPath="$PROJECT_DIR$/urn_model/03_Heap's_law.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/urn_model/05_mean_entropy.py" beforeDir="false" afterPath="$PROJECT_DIR$/urn_model/05_mean_entropy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/urn_model/06_triggering_intervals.py" beforeDir="false" afterPath="$PROJECT_DIR$/urn_model/06_inter_event_time.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/urn_model/shuffle.py" beforeDir="false" afterPath="$PROJECT_DIR$/urn_model/shuffle.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,100 +38,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/urn_model/01_paperId_date.py">
+        <entry file="file://$PROJECT_DIR$/urn_model/01_authorId_sequence&amp;affId_sequence.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="58" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/urn_model/02_author_institution_sequence.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="42" column="30" lean-forward="true" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/urn_model/shuffle.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="54" selection-start-line="54" selection-end-line="54" />
-              <folding>
-                <element signature="e#101#119#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="272">
+              <caret line="18" selection-start-line="18" selection-end-line="20" selection-end-column="80" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/urn_model/pkl_file_example.py">
+        <entry file="file://$PROJECT_DIR$/urn_model/02_author_institution_sequence.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="59" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils/entity_io.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils/pkl_io.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
-              <caret line="28" selection-start-line="28" selection-end-line="37" selection-end-column="76" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/urn_model/03_Heap's_law.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/urn_model/05_mean_entropy.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="13" column="33" lean-forward="true" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/urn_model/06_inter_event_time.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="10" lean-forward="true" selection-start-column="10" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/Program Files/Python/Python36/Lib/codecs.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="319" selection-start-line="319" selection-end-line="319" />
+            <state relative-caret-position="456">
+              <caret line="24" column="45" lean-forward="true" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -160,7 +75,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/04_institution_scaling_cross_institution/15_impact_three2sixauthor_cross.py" />
         <option value="$PROJECT_DIR$/05_scaling_within_other_properties/01_impact-indiv_collab.py" />
         <option value="$PROJECT_DIR$/05_scaling_within_other_properties/02_impact-internal_collab.py" />
         <option value="$PROJECT_DIR$/05_scaling_within_other_properties/03_impact_oneauthor_avg_collab.py" />
@@ -205,12 +119,13 @@
         <option value="$PROJECT_DIR$/urn_model/03_cumul_affIds-cumul_authorIds.py" />
         <option value="$PROJECT_DIR$/urn_model/04_Zeapf's_law.py" />
         <option value="$PROJECT_DIR$/urn_model/06_triggering_intervals.py" />
-        <option value="$PROJECT_DIR$/urn_model/02_author_institution_sequence.py" />
         <option value="$PROJECT_DIR$/urn_model/03_Heap's_law.py" />
         <option value="$PROJECT_DIR$/urn_model/shuffle.py" />
         <option value="$PROJECT_DIR$/urn_model/05_mean_entropy.py" />
         <option value="$PROJECT_DIR$/pkl_file_example.py" />
         <option value="$PROJECT_DIR$/urn_model/pkl_file_example.py" />
+        <option value="$PROJECT_DIR$/urn_model/01_authorId_sequence&amp;affId_sequence.py" />
+        <option value="$PROJECT_DIR$/urn_model/02_author_institution_sequence.py" />
       </list>
     </option>
   </component>
@@ -228,6 +143,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -249,7 +165,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -265,15 +180,16 @@
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\hezh\Documents\OneDrive\2018USC-ISI\institution scaling\code\05_institution_scaling_within_institution" />
+      <recent name="C:\Users\hezh\Documents\OneDrive\2018USC-ISI\Institution_Scaling\code2" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hezh\Documents\OneDrive\2018USC-ISI\institution_scaling\code\urn_model" />
       <recent name="C:\Users\hezh\Documents\OneDrive\2018USC-ISI\institution_scaling2\code\utils" />
       <recent name="C:\Users\hezh\Documents\OneDrive\2018USC-ISI\institution scaling\code" />
       <recent name="C:\Users\hezh\Documents\OneDrive\2018USC-ISI\institution scaling\code\04_institution_scaling_cross_institution" />
       <recent name="C:\Users\hezh\Documents\OneDrive\2018USC-ISI\Institution_Scaling\code2\paper_modeling" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\hezh\Documents\OneDrive\2018USC-ISI\institution scaling\code\05_institution_scaling_within_institution" />
-      <recent name="C:\Users\hezh\Documents\OneDrive\2018USC-ISI\Institution_Scaling\code2" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -402,12 +318,13 @@
       <workItem from="1553085238562" duration="34861000" />
       <workItem from="1553174441261" duration="18782000" />
       <workItem from="1553242114488" duration="17035000" />
-      <workItem from="1553268227070" duration="16040000" />
+      <workItem from="1553268227070" duration="17395000" />
+      <workItem from="1553428529812" duration="2034000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89861000" />
+    <option name="totallyTimeSpent" value="93250000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -419,22 +336,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1633" height="1053" extended-state="7" />
+    <frame x="-6" y="-6" width="1633" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16126984" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1752381" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.30802602" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.3991323" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="File Transfer" order="9" weight="0.17678958" />
+      <window_info anchor="bottom" id="File Transfer" order="9" visible="true" weight="0.17678958" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.17118093" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
@@ -478,9 +395,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/06_scaling_with_collaborations/04_impact_oneauthor-avg_external_indiv_collab_within.py" />
     <entry file="file://$PROJECT_DIR$/06_scaling_with_collaborations/03_impact_three2sixauthor-avg_internal_collab_within.py" />
-    <entry file="file://$PROJECT_DIR$/06_scaling_with_collaborations/03_impact_three2sixauthor-avg_internal_collab_cross.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/06_scaling_with_collaborations/03_impact_three2sixauthor-avg_internal_collab_cross.py" />
     <entry file="file://$PROJECT_DIR$/06_scaling_with_collaborations/02_impact_twoauthor-avg_internal_collab_within.py" />
     <entry file="file://$PROJECT_DIR$/06_scaling_with_collaborations/01_impact_oneauthor-avg_internal_collab_within.py" />
     <entry file="file://$PROJECT_DIR$/06_scaling_with_collaborations/05_impact_twoauthor-avg_external_indiv_collab_within.py" />
@@ -555,21 +470,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/06_scaling_with_collaborations/01_impact_oneauthor-avg_internal_collab_cross.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/06_scaling_with_collaborations/02_impact_twoauthor-avg_internal_collab_cross.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/06_scaling_with_collaborations/06_impact_three2sixauthor-avg_external_indiv_collab_cross.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/06_scaling_with_collaborations/05_impact_twoauthor-avg_external_indiv_collab_cross.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/06_scaling_with_collaborations/04_impact_oneauthor-avg_external_indiv_collab_cross.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/06_scaling_with_collaborations/01_impact_oneauthor-avg_internal_collab_cross.py" />
+    <entry file="file://$PROJECT_DIR$/06_scaling_with_collaborations/02_impact_twoauthor-avg_internal_collab_cross.py" />
+    <entry file="file://$PROJECT_DIR$/06_scaling_with_collaborations/06_impact_three2sixauthor-avg_external_indiv_collab_cross.py" />
+    <entry file="file://$PROJECT_DIR$/06_scaling_with_collaborations/05_impact_twoauthor-avg_external_indiv_collab_cross.py" />
+    <entry file="file://$PROJECT_DIR$/06_scaling_with_collaborations/04_impact_oneauthor-avg_external_indiv_collab_cross.py" />
     <entry file="file://$PROJECT_DIR$/scaling_with_collaborations.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="589">
@@ -587,9 +492,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/urn_model/01_cumul_instutions-cumul_researchers.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/urn_model/01_cumul_instutions-cumul_researchers.py" />
     <entry file="file://$PROJECT_DIR$/utils/linear_regression.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -658,24 +561,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/urn_model/pkl_file_example.py" />
+    <entry file="file://$PROJECT_DIR$/utils/entity_io.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/pkl_io.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="28" selection-start-line="28" selection-end-line="37" selection-end-column="76" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://C:/Program Files/Python/Python36/Lib/codecs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
+        <state relative-caret-position="6061">
           <caret line="319" selection-start-line="319" selection-end-line="319" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/urn_model/06_inter_event_time.py">
+    <entry file="file://$PROJECT_DIR$/urn_model/shuffle.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="10" lean-forward="true" selection-start-column="10" selection-end-column="10" />
+        <state relative-caret-position="436">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+          <folding>
+            <element signature="e#101#119#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/urn_model/03_Heap's_law.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
@@ -686,54 +613,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/entity_io.py">
+    <entry file="file://$PROJECT_DIR$/urn_model/06_inter_event_time.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+        <state>
+          <caret column="10" lean-forward="true" selection-start-column="10" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/urn_model/01_paperId_date.py">
+    <entry file="file://$PROJECT_DIR$/urn_model/01_authorId_sequence&amp;affId_sequence.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="58" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="58" />
+        <state relative-caret-position="272">
+          <caret line="18" selection-start-line="18" selection-end-line="20" selection-end-column="80" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/urn_model/02_author_institution_sequence.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="42" column="30" lean-forward="true" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/urn_model/shuffle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
-          <folding>
-            <element signature="e#101#119#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/pkl_io.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="28" selection-start-line="28" selection-end-line="37" selection-end-column="76" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/urn_model/pkl_file_example.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="59" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
+        <state relative-caret-position="456">
+          <caret line="24" column="45" lean-forward="true" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
         </state>
       </provider>
     </entry>
