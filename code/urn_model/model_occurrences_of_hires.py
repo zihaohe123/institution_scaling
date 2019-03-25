@@ -49,7 +49,11 @@ def record_mean_entropy(sequence):
     unique_institutes = set(sequence)
     # print(len(unique_institutes))
     entropy_institute = []
+    num = 0
     for institute in unique_institutes:
+        num += 1
+        if num % 100 == 0:
+            print('entropy, the {}th institution'.format(num), time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
         k, norm_entropy = record_entropy(sequence, institute)
         # print([k,norm_entropy])
         if norm_entropy is not None:
@@ -160,6 +164,7 @@ def record_growth_statistics(sequence):
     #       - times between researchers join institutes
 
     # Zipf's law
+    print("Zipf's law", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
     delta_n = 0.05
     bin_array = [10 ** x for x in np.arange(0, np.log10(len(sequence)) + delta_n, delta_n)]
     bin_vals = np.array([bin_array[i:i + 2] for i in range(0, len(bin_array), 1) if len(bin_array[i:i + 2]) > 1])
@@ -170,12 +175,16 @@ def record_growth_statistics(sequence):
     ZipfLaw = {'histogram': list(hist[0]), 'bin_low': list(bin_vals[:, 0]), 'bin_high': list(bin_vals[:, 1])}
 
     # Heap's law: {# researchers,#institutes}
+    print("Heap's law", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
     HeapsLaw = {'num_researchers': list(range(len(sequence))),
                 'num_institutes': [len(set(sequence[:n])) for n in range(len(sequence))]}
 
     # entropy
+    print("entropy", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
     EntropyK = record_mean_entropy(sequence)
+
     # inter-event times
+    print('inter-event times', time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
     InterEventTimes = inter_event_time_dist(sequence)
     data = {'ZipfLaw': ZipfLaw, 'HeapsLaw': HeapsLaw, 'EntropyK': EntropyK, 'InterEventTimes': InterEventTimes}
     return data
@@ -205,12 +214,19 @@ def local_growth_statistics(growth_data, sequence):
 
 def finish_data_collection(sequence):
     null_global_data = randomize_globally(sequence)
+
+    print("real data analysis started", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
     growth_data = record_growth_statistics(sequence)
-    print("real data analyzed")
+    print("real data analyzed", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
+
+    print("global random data analysis started", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
     global_null_growth_data = record_growth_statistics(null_global_data)
-    print("global random data analyzed")
+    print("global random data analyzed", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
+
+    print("local random data analysis started", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
     local_null_growth_data = local_growth_statistics(growth_data, sequence)
-    print("local random data analyzed")
+    print("local random data analyzed", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
+
     growth_data = {'data': growth_data, 'local_null': local_null_growth_data, 'global_null': global_null_growth_data}
     return growth_data
 
@@ -241,12 +257,12 @@ def main():
         authorId_affId_sequence = open_pkl_file(directory_urn_model, 'authorId_affId_sequence')
         authorId_sequence = get_column(authorId_affId_sequence, 0)
         affId_sequence = get_column(authorId_affId_sequence, 1)
-        print("loaded...")
+        print("loaded...", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
         affil_data = {"author_id": authorId_sequence, "affil_id": affId_sequence}
         df = pd.DataFrame(data=affil_data)
         noduplicate_df = df.drop_duplicates()
         noduplicate_df.to_csv("CleanedSequenceData.csv", index=False)
-        print("cleaned")
+        print("cleaned", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
     # sequence of affiliations
     seq = np.array(noduplicate_df[['affil_id']].loc[:].values.tolist())
 

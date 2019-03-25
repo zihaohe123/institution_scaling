@@ -12,7 +12,7 @@ else:
 directory_data = os.path.join(directory_root, 'data')
 directory_papers = os.path.join(directory_data, 'papers')
 directory_mag_data = os.path.join(directory_data, 'mag_data')
-directory_institutions = directory_data + 'institutions'
+directory_institutions = os.path.join(directory_data, 'institutions')
 
 directory_results = os.path.join(directory_root, 'results')
 directory_dataset_description = os.path.join(directory_results, 'dataset_description')

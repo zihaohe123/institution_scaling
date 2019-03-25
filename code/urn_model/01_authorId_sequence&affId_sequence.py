@@ -34,5 +34,5 @@ if __name__ == '__main__':
     affId_sequence.sort(key=lambda t: t[1])
 
     save_pkl_file(directory_urn_model, 'ordered_authorId_sequence', authorId_sequence)
-    save_pkl_file(directory_urn_model, 'ordered_affId_sequence', authorId_sequence)
+    save_pkl_file(directory_urn_model, 'ordered_affId_sequence', affId_sequence)
 

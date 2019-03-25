@@ -195,7 +195,7 @@ class Affiliation:
         for year in self.year_paperId_internal_collab:
             self.year_internal_collab[year] = set()
             for paperId in self.year_paperId_internal_collab[year]:
-                internal_collab = self.year_paperId_internal_collab[paperId]
+                internal_collab = self.year_paperId_internal_collab[year][paperId]
                 self.year_internal_collab[year] = self.year_internal_collab[year].union(internal_collab)
         for year in self.year_internal_collab:
             self.year_internal_collab[year] = len(self.year_internal_collab[year]) // 2
@@ -205,7 +205,7 @@ class Affiliation:
         for year in self.year_paperId_external_inst_collab:
             self.year_external_inst_collab[year] = set()
             for paperId in self.year_paperId_internal_collab[year]:
-                external_inst_collab = self.year_paperId_external_inst_collab[paperId]
+                external_inst_collab = self.year_paperId_external_inst_collab[year][paperId]
                 self.year_external_inst_collab[year] = self.year_external_inst_collab[year].union(external_inst_collab)
         for year in self.year_external_inst_collab:
             self.year_external_inst_collab[year] = len(self.year_external_inst_collab[year])
@@ -215,7 +215,7 @@ class Affiliation:
         for year in self.year_paperId_external_indiv_collab:
             self.year_external_indiv_collab[year] = set()
             for paperId in self.year_paperId_external_indiv_collab[year]:
-                external_indiv_collab = self.year_paperId_external_indiv_collab[paperId]
+                external_indiv_collab = self.year_paperId_external_indiv_collab[year][paperId]
                 self.year_external_indiv_collab[year] = self.year_external_indiv_collab[year].union(external_indiv_collab)
         for year in self.year_external_indiv_collab:
             self.year_external_indiv_collab[year] = len(self.year_external_indiv_collab[year]) // 2
@@ -225,8 +225,8 @@ class Affiliation:
         for year in self.year_paperId_indiv_collab:
             self.year_indiv_collab[year] = set()
             for paperId in self.year_paperId_indiv_collab[year]:
-                indiv_collab = self.year_paperId_indiv_collab[paperId]
-                self.year_indiv_collab = self.year_indiv_collab[year].union(indiv_collab)
+                indiv_collab = self.year_paperId_indiv_collab[year][paperId]
+                self.year_indiv_collab[year] = self.year_indiv_collab[year].union(indiv_collab)
         for year in self.year_indiv_collab:
             self.year_indiv_collab[year] = len(self.year_indiv_collab[year]) // 2
             self.year_avg_indiv_collab[year] = self.year_indiv_collab[year] / self.year_size[year]

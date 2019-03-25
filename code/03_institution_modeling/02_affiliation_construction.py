@@ -28,7 +28,7 @@ def construct_affiliations_from_papers(paperIds, affId):
         year = paper.year
         authors = paper.authors
         contribution = paper.aff_contribution[affId]
-        citations = paper.cumul_citations
+        citations = paper.citations
 
         authorIds = set()
         internal_authorIds = set()
@@ -107,7 +107,7 @@ def construct_affiliations(affId_paperIds, affIds, m, n):
 
 
 if __name__ == '__main__':
-    affId_paperIds = open_pkl_file(directory_data, 'affId_paperIds')
+    affId_paperIds = open_pkl_file(directory_dataset_description, 'affId_paperIds')
     affIds = list(affId_paperIds.keys())
     print(len(affIds))
     threads = []
