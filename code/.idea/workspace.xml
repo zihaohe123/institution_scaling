@@ -1,28 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/urn_model/05_mean_entropy.py" description="    affId_sequence = open_pkl_file(directory_urn_m..." line="7" />
     <bookmark url="file://$PROJECT_DIR$/urn_model/02_author_institution_sequence.py" description="        num += 1&#10;        if num % 1000 == 0:&#10;     ..." line="17" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="244e1e0a-94ea-4eaa-a0c8-46a93af98ef1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../results/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../results/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../results/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../results/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../results/.idea/results.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../results/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../results/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03_institution_modeling/02_affiliation_construction.py" beforeDir="false" afterPath="$PROJECT_DIR$/03_institution_modeling/02_affiliation_construction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entities/affiliation.py" beforeDir="false" afterPath="$PROJECT_DIR$/entities/affiliation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/urn_model/01_authorId_sequence&amp;affId_sequence.py" beforeDir="false" afterPath="$PROJECT_DIR$/urn_model/01_authorId_sequence&amp;affId_sequence.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/urn_model/02_author_institution_sequence.py" beforeDir="false" afterPath="$PROJECT_DIR$/urn_model/02_author_institution_sequence.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/urn_model/03_Heap's_law.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/urn_model/04_Zeapf's_law.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/urn_model/05_mean_entropy.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/urn_model/06_inter_event_time.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/urn_model/model_occurrences_of_hires.py" beforeDir="false" afterPath="$PROJECT_DIR$/urn_model/model_occurrences_of_hires.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/directories.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/directories.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/reshape_array.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../results/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../results/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../results/urn_model/affId_sequence.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/../results/urn_model/affId_sequence.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../results/urn_model/authorId_affId_sequence.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/../results/urn_model/authorId_affId_sequence.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../results/urn_model/authorId_sequence.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/../results/urn_model/authorId_sequence.pkl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +25,7 @@
     <SUITE FILE_PATH="coverage/code$02_author_institution_sequence.coverage" NAME="02_author_institution_sequence Coverage Results" MODIFIED="1553434248051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/urn_model" />
     <SUITE FILE_PATH="coverage/code$05_mean_entropy.coverage" NAME="05_mean_entropy Coverage Results" MODIFIED="1553302076000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/urn_model" />
     <SUITE FILE_PATH="coverage/code2$01_year_papernum.coverage" NAME="01_year_papernum Coverage Results" MODIFIED="1553159039729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mag_data_preprocessing" />
+    <SUITE FILE_PATH="coverage/code$main.coverage" NAME="main Coverage Results" MODIFIED="1553600027124" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/code$directories.coverage" NAME="directories Coverage Results" MODIFIED="1553244104768" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/code2$excel_io.coverage" NAME="excel_io Coverage Results" MODIFIED="1553093544276" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
   </component>
@@ -53,29 +45,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/urn_model/01_authorId_sequence&amp;affId_sequence.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="20" column="79" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="79" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/urn_model/02_author_institution_sequence.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="3" lean-forward="true" selection-start-column="3" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/urn_model/model_occurrences_of_hires.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1270">
-              <caret line="182" column="73" selection-start-line="182" selection-start-column="73" selection-end-line="182" selection-end-column="73" />
+            <state relative-caret-position="218">
+              <caret line="262" selection-start-line="262" selection-end-line="262" />
             </state>
           </provider>
         </entry>
@@ -94,8 +68,9 @@
       <find>size</find>
       <find>cumul</find>
       <find>internal_collab</find>
-      <find>print</find>
       <find>add_folder</find>
+      <find>data</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -104,10 +79,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/05_scaling_within_other_properties/02_impact_twoauthor-avg_internal_collab_within.py" />
-        <option value="$PROJECT_DIR$/05_scaling_with_other_properties/03_impact_three2sixauthor-avg_internal_collab_cross.py" />
-        <option value="$PROJECT_DIR$/05_scaling_with_other_properties/03_impact_three2sixauthor-avg_internal_collab_within.py" />
-        <option value="$PROJECT_DIR$/05_scaling_with_other_properties/04_impact_oneauthor-avg_external_indiv_collab_cross.py" />
         <option value="$PROJECT_DIR$/05_scaling_with_other_properties/04_impact_oneauthor-avg_external_indiv_collab_within.py" />
         <option value="$PROJECT_DIR$/05_scaling_with_other_properties/05_impact_twoauthor-avg_external_indiv_collab_cross.py" />
         <option value="$PROJECT_DIR$/05_scaling_with_other_properties/05_impact_twoauthor-avg_external_indiv_collab_within.py" />
@@ -154,14 +125,19 @@
         <option value="$PROJECT_DIR$/entities/affiliation.py" />
         <option value="$PROJECT_DIR$/utils/directories.py" />
         <option value="$PROJECT_DIR$/urn_model/02_author_institution_sequence.py" />
+        <option value="$PROJECT_DIR$/urn_model/03_model_hires.py" />
+        <option value="$PROJECT_DIR$/urn_model/model_occurences_of_hires_subsequence.py" />
+        <option value="$PROJECT_DIR$/urn_model/model_occurrences_of_hires_subsequence.py" />
+        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/urn_model/model_occurrences_of_hires.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="width" value="1642" />
-    <option name="height" value="2092" />
+    <option name="x" value="-12" />
+    <option name="y" value="-12" />
+    <option name="width" value="3266" />
+    <option name="height" value="2106" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -242,7 +218,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.02_author_institution_sequence">
+  <component name="RunManager" selected="Python.main">
     <configuration name="01_year_papernum" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="code2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -331,7 +307,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="excel_io" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="code2" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -339,12 +315,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utils" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/excel_io.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -355,11 +331,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.02_author_institution_sequence" />
         <item itemvalue="Python.05_mean_entropy" />
         <item itemvalue="Python.directories" />
         <item itemvalue="Python.01_year_papernum" />
-        <item itemvalue="Python.excel_io" />
       </list>
     </recent_temporary>
   </component>
@@ -380,12 +356,12 @@
       <workItem from="1553174441261" duration="18782000" />
       <workItem from="1553242114488" duration="17035000" />
       <workItem from="1553268227070" duration="17395000" />
-      <workItem from="1553428529812" duration="17086000" />
+      <workItem from="1553428529812" duration="27961000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108302000" />
+    <option name="totallyTimeSpent" value="119177000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -400,12 +376,12 @@
     <frame x="-6" y="-6" width="1633" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.121269844" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15174603" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.30802602" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.61171365" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -414,13 +390,13 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="File Transfer" order="9" weight="0.17678958" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.5173536" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.17462039" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="13" visible="true" weight="0.18763557" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="13" visible="true" weight="0.23861171" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Remote Host" order="3" weight="0.13904762" />
+      <window_info anchor="right" id="Remote Host" order="3" weight="0.25206348" />
       <window_info anchor="right" id="SciView" order="4" />
       <window_info anchor="right" id="Database" order="5" weight="0.32896462" />
     </layout>
@@ -454,9 +430,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/06_scaling_with_collaborations/02_impact_twoauthor-avg_internal_collab_within.py" />
-    <entry file="file://$PROJECT_DIR$/06_scaling_with_collaborations/01_impact_oneauthor-avg_internal_collab_within.py" />
-    <entry file="file://$PROJECT_DIR$/06_scaling_with_collaborations/05_impact_twoauthor-avg_external_indiv_collab_within.py" />
     <entry file="file://$PROJECT_DIR$/05_scaling_with_institution_size/01_internal_collab_within.py" />
     <entry file="file://$PROJECT_DIR$/05_scaling_with_institution_size/01_internal_collab_cross.py" />
     <entry file="file://$PROJECT_DIR$/05_scaling_with_institution_size/01_internal_collab.py" />
@@ -709,10 +682,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/urn_model/03_model_hires.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="11" selection-start-column="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/urn_model/model_occurrences_of_hires_subsequence.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="169" column="7" selection-start-line="169" selection-end-line="170" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/urn_model/model_occurrences_of_hires.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1270">
-          <caret line="182" column="73" selection-start-line="182" selection-start-column="73" selection-end-line="182" selection-end-column="73" />
+        <state relative-caret-position="218">
+          <caret line="262" selection-start-line="262" selection-end-line="262" />
         </state>
       </provider>
     </entry>

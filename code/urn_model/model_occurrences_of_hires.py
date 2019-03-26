@@ -9,7 +9,6 @@ import shutil, os, time
 import pickle as pk
 from utils.pkl_io import open_pkl_file
 from utils.directories import *
-from utils.reshape_array import get_column
 
 
 def unique_colors(sequence, n):
@@ -227,7 +226,7 @@ def finish_data_collection(sequence):
     local_null_growth_data = local_growth_statistics(growth_data, sequence)
     print("local random data analyzed", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
 
-    growth_data = {'data': growth_data, 'local_null': local_null_growth_data, 'global_null': global_null_growth_data}
+    growth_data = {'original': growth_data, 'local_null': local_null_growth_data, 'global_null': global_null_growth_data}
     return growth_data
 
 
@@ -238,39 +237,58 @@ def export_growth_data(growth_data):
             export_data = growth_data[data][data_type]
             df = pd.DataFrame(data=export_data)
             # export to folder "growth_data/", "local_null/", or "global_null/"
-            df.to_csv(data + "/" + data_type + ".csv", index=False)
+            path = os.path.join(directory_urn_model, data, data_type+".csv")
+            df.to_csv(path, index=False)
 
 
 def add_folder(folder):
+    path = os.path.join(directory_urn_model, folder)
     # delete old folder and contents
-    if os.path.exists(folder + "/"):
-        shutil.rmtree(folder + "/")
+    if os.path.exists(path):
+        shutil.rmtree(path)
     # if not os.path.exists(folder+"/"):
-    os.mkdir(folder + "/")
+    os.mkdir(path)
+
+
+def merge_data():
+    # put the same kind of result in one csv file
+    add_folder(os.path.join(directory_urn_model, 'merged_data'))
+    for result_type in ['ZipfLaw', 'HeapsLaw', 'EntropyK', 'InterEventTimes']:
+        merged_data = []
+        for data_type in ['original', 'local_null', 'global_null']:
+            path = os.path.join(directory_urn_model, data_type, result_type+".csv")
+            data = pd.read_csv(path)
+            columns = data.columns.tolist()
+            new_columns = {column: "{}_{}".format(column, data_type) for column in columns}
+            data.rename(columns=new_columns, inplace=True)
+            merged_data.append(data)
+        new_data = pd.concat([each for each in merged_data], axis=1)
+        new_data.to_csv(os.path.join(directory_urn_model, 'merged_data', result_type+".csv"))
 
 
 def main():
-    cleaned_file_name = "CleanedSequenceData.csv"
+    cleaned_file_name = "CleanedSequenceData2.csv"
     if os.path.isfile(cleaned_file_name):
-        noduplicate_df = pd.read_csv("CleanedSequenceData.csv")
+        noduplicate_df = pd.read_csv(os.path.join(directory_urn_model, cleaned_file_name))
     else:
-        authorId_affId_sequence = open_pkl_file(directory_urn_model, 'authorId_affId_sequence')
-        authorId_sequence = get_column(authorId_affId_sequence, 0)
-        affId_sequence = get_column(authorId_affId_sequence, 1)
+        authorId_affId_sequence = open_pkl_file(directory_urn_model, 'authorId_affId_sequence')[:10000]
+        authorId_affId_sequence = np.asanyarray(authorId_affId_sequence, dtype=int)
+        authorId_sequence = authorId_affId_sequence[:, 0]
+        affId_sequence = authorId_affId_sequence[:, 1]
         print("loaded...", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
         affil_data = {"author_id": authorId_sequence, "affil_id": affId_sequence}
         df = pd.DataFrame(data=affil_data)
         noduplicate_df = df.drop_duplicates()
-        noduplicate_df.to_csv("CleanedSequenceData.csv", index=False)
+        noduplicate_df.to_csv(os.path.join(directory_urn_model, cleaned_file_name), index=False)
         print("cleaned", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
     # sequence of affiliations
     seq = np.array(noduplicate_df[['affil_id']].loc[:].values.tolist())
-
     seq = seq.flatten().tolist()
 
     start_time = time.time()
     growth_data = finish_data_collection(seq)
     export_growth_data(growth_data)
+    merge_data()
     print("--- %s seconds ---" % (time.time() - start_time))
 
 
