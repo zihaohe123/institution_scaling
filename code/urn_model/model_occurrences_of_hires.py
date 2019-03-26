@@ -263,7 +263,7 @@ def merge_data():
             data.rename(columns=new_columns, inplace=True)
             merged_data.append(data)
         new_data = pd.concat([each for each in merged_data], axis=1)
-        new_data.to_csv(os.path.join(directory_urn_model, 'merged_data', result_type+".csv"))
+        new_data.to_csv(os.path.join(directory_urn_model, 'merged_data', result_type+".csv"), index=False)
 
 
 def main():

@@ -1,5 +1,5 @@
-import sys
-sys.path.append('..')
+# import sys
+# sys.path.append('..')
 from utils.linear_regression import linear_regression
 from utils.excel_io import save_xlsx_file_multi_sheets
 from utils.pkl_io import save_pkl_file, open_pkl_file
@@ -106,5 +106,5 @@ def within_institution_scaling(property_x, property_y, filepath, filename):
 
 
 def cross_and_within_institution_scaling(property_x, property_y, filepath, filename):
-    cross_institution_scaling(property_x, property_y, filepath, filename+'cross')
-    within_institution_scaling(property_x, property_y, filepath, filename+'within')
+    cross_institution_scaling(property_x, property_y, filepath, filename+'_cross')
+    within_institution_scaling(property_x, property_y, filepath, filename+'_within')

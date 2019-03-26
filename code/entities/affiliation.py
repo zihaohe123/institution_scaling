@@ -22,6 +22,10 @@ class Affiliation:
         self.year_external_inst_collab = {}
         self.year_external_indiv_collab = {}
         self.year_indiv_collab = {}  # internal (individual) collaborations + external individual collaborations
+        self.year_cumul_internal_collab = {}
+        self.year_cumul_external_inst_collab = {}
+        self.year_cumul_external_indiv_collab = {}
+        self.year_cumul_indiv_collab = {}
         self.year_avg_internal_collab = {}
         self.year_avg_external_inst_collab = {}
         self.year_avg_external_indiv_collab = {}
@@ -120,6 +124,7 @@ class Affiliation:
         if year not in self.year_paperId_internal_collab:
             self.year_paperId_internal_collab[year] = {}
         self.year_paperId_internal_collab[year][paperId] = internal_collab
+
         if year not in self.year_paperId_external_inst_collab:
             self.year_paperId_external_inst_collab[year] = {}
         self.year_paperId_external_inst_collab[year][paperId] = external_inst_collab
@@ -197,9 +202,20 @@ class Affiliation:
             for paperId in self.year_paperId_internal_collab[year]:
                 internal_collab = self.year_paperId_internal_collab[year][paperId]
                 self.year_internal_collab[year] = self.year_internal_collab[year].union(internal_collab)
+        years = list(self.year_internal_collab.keys())
+        years.sort()
+        first_year = years[0]
+        self.year_cumul_internal_collab[first_year] = self.year_internal_collab[first_year]
+        for i in range(1, len(years)):
+            cur_year = years[i]
+            prev_year = years[i-1]
+            self.year_cumul_internal_collab[cur_year] = self.year_cumul_internal_collab[prev_year].union(self.year_internal_collab[cur_year])
         for year in self.year_internal_collab:
             self.year_internal_collab[year] = len(self.year_internal_collab[year]) // 2
+            self.year_cumul_internal_collab[year] = len(self.year_cumul_internal_collab[year]) // 2
             self.year_avg_internal_collab[year] = self.year_internal_collab[year] / self.year_size[year]
+
+
 
         # external institutional collaborations
         for year in self.year_paperId_external_inst_collab:
@@ -207,9 +223,19 @@ class Affiliation:
             for paperId in self.year_paperId_internal_collab[year]:
                 external_inst_collab = self.year_paperId_external_inst_collab[year][paperId]
                 self.year_external_inst_collab[year] = self.year_external_inst_collab[year].union(external_inst_collab)
+        years = list(self.year_external_inst_collab.keys())
+        years.sort()
+        first_year = years[0]
+        self.year_cumul_external_inst_collab[first_year] = self.year_external_inst_collab[first_year]
+        for i in range(1, len(years)):
+            cur_year = years[i]
+            prev_year = years[i-1]
+            self.year_cumul_external_inst_collab[cur_year] = self.year_cumul_external_inst_collab[prev_year].union(self.year_external_inst_collab[cur_year])
         for year in self.year_external_inst_collab:
             self.year_external_inst_collab[year] = len(self.year_external_inst_collab[year])
+            self.year_cumul_external_inst_collab[year] = len(self.year_cumul_external_inst_collab[year])
             self.year_avg_external_inst_collab[year] = self.year_external_inst_collab[year] / self.year_size[year]
+
 
         # external individual collaborations
         for year in self.year_paperId_external_indiv_collab:
@@ -217,9 +243,19 @@ class Affiliation:
             for paperId in self.year_paperId_external_indiv_collab[year]:
                 external_indiv_collab = self.year_paperId_external_indiv_collab[year][paperId]
                 self.year_external_indiv_collab[year] = self.year_external_indiv_collab[year].union(external_indiv_collab)
+        years = list(self.year_external_indiv_collab.keys())
+        years.sort()
+        first_year = years[0]
+        self.year_cumul_external_indiv_collab[first_year] = self.year_external_indiv_collab[first_year]
+        for i in range(1, len(years)):
+            cur_year = years[i]
+            prev_year = years[i-1]
+            self.year_cumul_external_indiv_collab[cur_year] = self.year_cumul_external_indiv_collab[prev_year].union(self.year_external_indiv_collab[cur_year])
         for year in self.year_external_indiv_collab:
             self.year_external_indiv_collab[year] = len(self.year_external_indiv_collab[year]) // 2
+            self.year_cumul_external_indiv_collab[year] = len(self.year_cumul_external_indiv_collab[year]) // 2
             self.year_avg_external_indiv_collab[year] = self.year_external_indiv_collab[year] / self.year_size[year]
+
 
         # individual collaborations
         for year in self.year_paperId_indiv_collab:
@@ -227,9 +263,19 @@ class Affiliation:
             for paperId in self.year_paperId_indiv_collab[year]:
                 indiv_collab = self.year_paperId_indiv_collab[year][paperId]
                 self.year_indiv_collab[year] = self.year_indiv_collab[year].union(indiv_collab)
+        years = list(self.year_indiv_collab.keys())
+        years.sort()
+        first_year = years[0]
+        self.year_cumul_indiv_collab[first_year] = self.year_indiv_collab[first_year]
+        for i in range(1, len(years)):
+            cur_year = years[i]
+            prev_year = years[i-1]
+            self.year_cumul_indiv_collab[cur_year] = self.year_cumul_indiv_collab[prev_year].union(self.year_indiv_collab[cur_year])
         for year in self.year_indiv_collab:
             self.year_indiv_collab[year] = len(self.year_indiv_collab[year]) // 2
+            self.year_cumul_indiv_collab[year] = len(self.year_cumul_indiv_collab[year]) // 2
             self.year_avg_indiv_collab[year] = self.year_indiv_collab[year] / self.year_size[year]
+
 
         # production and productivity
         for year in self.year_paperId_authorIds:
@@ -314,6 +360,10 @@ class Affiliation:
             'external_inst_collab': self.year_external_inst_collab,
             'external_indiv_collab': self.year_external_indiv_collab,
             'indiv_collab': self.year_indiv_collab,
+            'cumul_internal_collab': self.year_cumul_internal_collab,
+            'cumul_external_inst_collab': self.year_cumul_external_inst_collab,
+            'cumul_external_indiv_collab': self.year_cumul_external_indiv_collab,
+            'cumul_indiv_collab': self.year_indiv_collab,
             'avg_internal_collab': self.year_avg_internal_collab,
             'avg_external_inst_collab': self.year_avg_external_inst_collab,
             'avg_external_indiv_collab': self.year_avg_external_indiv_collab,
@@ -322,7 +372,7 @@ class Affiliation:
             'productivity': self.year_productivity,
             'avg_teamsize': self.year_avg_teamsize,
             'avg_internal_teamsize': self.year_avg_internal_teamsize,
-            'avg_external_teamszie': self.year_avg_external_teamsize,
+            'avg_external_teamsize': self.year_avg_external_teamsize,
             'avg_impact': self.year_avg_impact,
             'avg_impact_oneauthor': self.year_avg_impact_oneauthor,
             'avg_impact_twoauthor': self.year_avg_impact_twoauthor,

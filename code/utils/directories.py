@@ -19,3 +19,4 @@ directory_dataset_description = os.path.join(directory_results, 'dataset_descrip
 directory_scaling_with_institution_size = os.path.join(directory_results, 'scaling_with_institution_size')
 directory_scaling_with_collaborations = os.path.join(directory_results, 'scaling_with_collaborations')
 directory_urn_model = os.path.join(directory_results, 'urn_model')
+directory_collab_of_institutions = os.path.join(directory_dataset_description, 'collab_of_institutions')
