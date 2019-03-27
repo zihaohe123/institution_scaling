@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a9b76af-4494-4725-866b-67da4040944b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../code/03_institution_modeling/03_output_affiliation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../code/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../code/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../code/entities/affiliation.py" beforeDir="false" afterPath="$PROJECT_DIR$/../code/entities/affiliation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../code/scaling_with_institution_size.py" beforeDir="false" afterPath="$PROJECT_DIR$/../code/scaling_with_institution_size.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../code/urn_model/model_occurrences_of_hires.py" beforeDir="false" afterPath="$PROJECT_DIR$/../code/urn_model/model_occurrences_of_hires.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../code/utils/directories.py" beforeDir="false" afterPath="$PROJECT_DIR$/../code/utils/directories.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../code/utils/institution_scaling.py" beforeDir="false" afterPath="$PROJECT_DIR$/../code/utils/institution_scaling.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/03_institution_modeling/03_output_affiliation.py" beforeDir="false" afterPath="$PROJECT_DIR$/../code/03_institution_modeling/03_output_affiliation.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,15 +78,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1553491595141</updated>
-      <workItem from="1553491596348" duration="10750000" />
+      <workItem from="1553491596348" duration="11276000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10750000" />
+    <option name="totallyTimeSpent" value="11276000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1633" height="1053" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18730159" />

@@ -24,7 +24,7 @@ if __name__ == '__main__':
             cumul_internal_collab = affiliation.year_cumul_internal_collab[year]
             cumul_external_indiv_collab = affiliation.year_cumul_external_indiv_collab[year]
             data.append([year, size, internal_collab, external_collab, cumul_size, cumul_internal_collab, cumul_external_indiv_collab])
-        df = pd.DataFrame(data, columns={'year', 'size', '#internal_collab', '#external_collab',
-                                         'cumul_size', '#cumul_internal_collab', '#cumul_external_collab'})
+        df = pd.DataFrame(data, columns=['year', 'size', '#internal_collab', '#external_collab',
+                                         'cumul_size', '#cumul_internal_collab', '#cumul_external_collab'])
         path = os.path.join(directory_collab_of_institutions, '{}.csv'.format(affId))
         df.to_csv(path, index=False)
