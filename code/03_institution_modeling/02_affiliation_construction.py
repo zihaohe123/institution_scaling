@@ -35,8 +35,11 @@ def construct_affiliations_from_papers(paperIds, affId):
         external_authorIds = set()
         external_affIds = set()
 
+        authorId_affId = []
+
         for author in authors:
             authorIds.add(author.authorId)
+            authorId_affId.append((author.authorId, author.affId))
             if author.affId == affId:
                 internal_authorIds.add(author.authorId)
             else:
@@ -46,6 +49,7 @@ def construct_affiliations_from_papers(paperIds, affId):
         teamsize = len(authorIds)
         internal_teamsize = len(internal_authorIds)
         external_teamsize = len(external_authorIds)
+
 
         internal_collab = set()
         external_inst_collab = set()
@@ -59,7 +63,7 @@ def construct_affiliations_from_papers(paperIds, affId):
                 internal_collab.add((authorId1, authorId2))
                 internal_collab.add((authorId2, authorId1))
                 indiv_collab.add((authorId1, authorId2))
-                indiv_collab.add((authorId1, authorId2))
+                indiv_collab.add((authorId2, authorId1))
 
         for external_affId in external_affIds:
             external_inst_collab.add(external_affId)

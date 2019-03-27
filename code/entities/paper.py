@@ -11,12 +11,21 @@ class Paper:
         self.aff_authorIds = {}
         self.aff_contribution = {}
 
+        new_authors = []
+        authorIds = set()
+        for author in self.authors:
+            authorId = author.authorId
+            if authorId not in authorIds:
+                new_authors.append(author)
+            authorIds.add(authorId)
+        self.authors = new_authors
+
         for author in self.authors:
             affId = author.affId
-            authroId = author.authorId
+            authorId = author.authorId
             if affId not in self.aff_authorIds:
                 self.aff_authorIds[affId] = set()
-            self.aff_authorIds[affId].add(authroId)
+            self.aff_authorIds[affId].add(authorId)
 
         authornum = len(self.authors)
         for affId in self.aff_authorIds:

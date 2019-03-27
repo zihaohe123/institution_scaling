@@ -19,7 +19,7 @@ if __name__ == '__main__':
         for year in years:
             size = affiliation.year_size[year]
             internal_collab = affiliation.year_internal_collab[year]
-            external_collab = affiliation.year_internal_collab[year]
+            external_collab = affiliation.year_external_indiv_collab[year]
             cumul_size = affiliation.year_cumul_size[year]
             cumul_internal_collab = affiliation.year_cumul_internal_collab[year]
             cumul_external_indiv_collab = affiliation.year_cumul_external_indiv_collab[year]

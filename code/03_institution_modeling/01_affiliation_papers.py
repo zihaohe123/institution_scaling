@@ -18,7 +18,12 @@ if __name__ == '__main__':
         num += 1
         if num % 1000 == 0:
             print(num, '/', len(paperIds), ',', time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
+        authorIds = set()
         for author in paper.authors:
+            authorId = author.authorId
+            if authorId in authorIds:
+                continue
+            authorIds.add(authorId)
             affId = author.affId
             if affId not in affId_paperIds:
                 affId_paperIds[affId] = []

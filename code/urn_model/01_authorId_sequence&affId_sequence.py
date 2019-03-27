@@ -13,6 +13,7 @@ if __name__ == '__main__':
     affId_sequence = []  # (affId, date)
 
     num = 0
+    multi_affil = 0
     for filename in os.listdir(directory_mag_data):
         paper_entities = open_pkl_file(directory_mag_data, filename[0:-4])
         for paper_entity in paper_entities:
@@ -24,15 +25,21 @@ if __name__ == '__main__':
                 continue
             date = paper_entity['D']
             authors = paper_entity['AA']
+            authorIds = set()
             for author in authors:
                 authorId = author['AuId']
+                if authorId in authorIds:
+                    continue
+                authorIds.add(authorId)
                 affId = author['AfId']
                 authorId_sequence.append((authorId, date))
                 affId_sequence.append((affId, date))
+            multi_affil += len(authors) - len(authorIds)
+    print(multi_affil)
 
-    authorId_sequence.sort(key=lambda t: t[1])
-    affId_sequence.sort(key=lambda t: t[1])
-
-    save_pkl_file(directory_urn_model, 'ordered_authorId_sequence', authorId_sequence)
-    save_pkl_file(directory_urn_model, 'ordered_affId_sequence', affId_sequence)
+    # authorId_sequence.sort(key=lambda t: t[1])
+    # affId_sequence.sort(key=lambda t: t[1])
+    #
+    # save_pkl_file(directory_urn_model, 'ordered_authorId_sequence', authorId_sequence)
+    # save_pkl_file(directory_urn_model, 'ordered_affId_sequence', affId_sequence)
 

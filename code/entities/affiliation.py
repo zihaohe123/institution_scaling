@@ -215,8 +215,6 @@ class Affiliation:
             self.year_cumul_internal_collab[year] = len(self.year_cumul_internal_collab[year]) // 2
             self.year_avg_internal_collab[year] = self.year_internal_collab[year] / self.year_size[year]
 
-
-
         # external institutional collaborations
         for year in self.year_paperId_external_inst_collab:
             self.year_external_inst_collab[year] = set()
@@ -235,7 +233,6 @@ class Affiliation:
             self.year_external_inst_collab[year] = len(self.year_external_inst_collab[year])
             self.year_cumul_external_inst_collab[year] = len(self.year_cumul_external_inst_collab[year])
             self.year_avg_external_inst_collab[year] = self.year_external_inst_collab[year] / self.year_size[year]
-
 
         # external individual collaborations
         for year in self.year_paperId_external_indiv_collab:

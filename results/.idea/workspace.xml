@@ -3,7 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="2a9b76af-4494-4725-866b-67da4040944b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../code/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../code/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/03_institution_modeling/01_affiliation_papers.py" beforeDir="false" afterPath="$PROJECT_DIR$/../code/03_institution_modeling/01_affiliation_papers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/03_institution_modeling/02_affiliation_construction.py" beforeDir="false" afterPath="$PROJECT_DIR$/../code/03_institution_modeling/02_affiliation_construction.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../code/03_institution_modeling/03_output_affiliation.py" beforeDir="false" afterPath="$PROJECT_DIR$/../code/03_institution_modeling/03_output_affiliation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/entities/affiliation.py" beforeDir="false" afterPath="$PROJECT_DIR$/../code/entities/affiliation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/entities/paper.py" beforeDir="false" afterPath="$PROJECT_DIR$/../code/entities/paper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/urn_model/01_authorId_sequence&amp;affId_sequence.py" beforeDir="false" afterPath="$PROJECT_DIR$/../code/urn_model/01_authorId_sequence&amp;affId_sequence.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset_description/collab_of_institutions.tar.gz" beforeDir="false" afterPath="$PROJECT_DIR$/dataset_description/collab_of_institutions.tar.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/urn_model/authorId_affId_sequence.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/urn_model/authorId_affId_sequence.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/urn_model/authorId_sequence.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/urn_model/authorId_sequence.pkl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,27 +87,21 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1553491595141</updated>
-      <workItem from="1553491596348" duration="11276000" />
+      <workItem from="1553491596348" duration="11538000" />
+      <workItem from="1553662818584" duration="21000" />
+      <workItem from="1553707031034" duration="714000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11276000" />
+    <option name="totallyTimeSpent" value="12273000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1633" height="1053" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18730159" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17142858" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" visible="true" weight="0.1626898" />
-      <window_info anchor="bottom" id="Terminal" weight="0.329718" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="File Transfer" weight="0.329718" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -106,12 +109,19 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Remote Host" visible="true" weight="0.2952381" />
-      <window_info anchor="right" id="SciView" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="File Transfer" order="9" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Database Changes" order="10" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.329718" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="13" weight="0.16251354" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Remote Host" order="3" visible="true" weight="0.2952381" />
+      <window_info anchor="right" id="SciView" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
