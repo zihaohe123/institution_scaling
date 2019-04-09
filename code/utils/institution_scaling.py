@@ -6,6 +6,7 @@ from utils.pkl_io import save_pkl_file, open_pkl_file
 from utils.entity_io import open_affiliation
 from utils.directories import *
 import numpy as np
+from utils.plotting import linear_regression_plot, get_column
 
 
 def cross_institution_scaling(property_x, property_y, filepath, filename):
@@ -29,6 +30,11 @@ def cross_institution_scaling(property_x, property_y, filepath, filename):
 
     # do the log-log linear regression for each year
     years = list(year_x_y.keys())
+
+    data0 = year_x_y[years[0]]
+    # linear_regression_plot(get_column(data0, 0), get_column(data0, 1), filepath, filename)
+
+
     years.sort(reverse=True)
     year_alpha_and_R2 = [['year', 'alpha', 'R2']]
     year_alpha_and_R2_dict = {}

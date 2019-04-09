@@ -10,6 +10,7 @@ This file defines some utility functions for opening and saving a pickle file.
 def open_pkl_file(directory, file_name):
     path = os.path.join(directory, '{}.pkl'.format(file_name))
     if not os.path.exists(path):
+        print(path)
         return False
     with open(path, 'rb') as f:
         while 1:

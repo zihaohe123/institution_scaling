@@ -23,7 +23,7 @@ if __name__ == '__main__':
     cross_and_within_institution_scaling('size', 'avg_internal_teamsize', directory_scaling_with_institution_size, '06_avg_internal_teamsize')
 
     # average external teamsize vs. institution size
-    # cross_and_within_institution_scaling('size', 'avg_external_teamsize', directory_scaling_with_institution_size, '07_avg_external_teamsize')
+    cross_and_within_institution_scaling('size', 'avg_external_teamsize', directory_scaling_with_institution_size, '07_avg_external_teamsize')
 
     # production vs. institution size
     cross_and_within_institution_scaling('size', 'production', directory_scaling_with_institution_size, '08_production')

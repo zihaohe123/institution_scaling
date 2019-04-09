@@ -35,6 +35,8 @@ class Affiliation:
         self.year_production = {}
         self.year_paperId_contribution = {}
         self.year_productivity = {}
+        self.year_cumul_production = {}
+        self.year_cumul_productivity = {}
 
         # properties related to team size
         self.year_paperId_teamsize = {}
@@ -253,7 +255,6 @@ class Affiliation:
             self.year_cumul_external_indiv_collab[year] = len(self.year_cumul_external_indiv_collab[year]) // 2
             self.year_avg_external_indiv_collab[year] = self.year_external_indiv_collab[year] / self.year_size[year]
 
-
         # individual collaborations
         for year in self.year_paperId_indiv_collab:
             self.year_indiv_collab[year] = set()
@@ -273,12 +274,21 @@ class Affiliation:
             self.year_cumul_indiv_collab[year] = len(self.year_cumul_indiv_collab[year]) // 2
             self.year_avg_indiv_collab[year] = self.year_indiv_collab[year] / self.year_size[year]
 
-
         # production and productivity
         for year in self.year_paperId_authorIds:
             self.year_production[year] = len(self.year_paperId_authorIds[year])
         for year in self.year_paperId_contribution:
             self.year_productivity[year] = sum(self.year_paperId_contribution[year].values())
+        years = list(self.year_production)
+        years.sort()
+        first_year = years[0]
+        self.year_cumul_production[first_year] = self.year_production[first_year]
+        self.year_cumul_productivity[first_year] = self.year_productivity[first_year]
+        for i in range(1, len(years)):
+            cur_year = years[i]
+            prev_year = years[i-1]
+            self.year_cumul_production[cur_year] = self.year_cumul_production[prev_year] + self.year_production[cur_year]
+            self.year_cumul_productivity[cur_year] = self.year_cumul_productivity[prev_year] + self.year_productivity[cur_year]
 
         # teamsize
         for year in self.year_paperId_teamsize:

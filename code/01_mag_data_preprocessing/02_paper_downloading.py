@@ -16,7 +16,6 @@ from utils.directories import *
 year_num = open_pkl_file(directory_dataset_description, 'year_papernum')
 years = list(year_num.keys())
 
-
 def paper_downloading(groups_num, group_num):
 
     length = math.ceil(len(years) / groups_num)
