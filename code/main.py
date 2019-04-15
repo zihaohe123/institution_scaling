@@ -14,3 +14,5 @@ gp.fit(xdata[:, np.newaxis], ydata)
 xfit = np.linspace(0, 10, 1000)
 yfit, MSE = gp.predict(xfit[:, np.newaxis], eval_MSE=True)
 dyfit = 2 * np.sqrt(MSE)  # 2*sigma ~ 95% confidence region
+
+GaussianProcess

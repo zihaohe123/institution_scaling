@@ -30,7 +30,7 @@ def paper_downloading(groups_num, group_num):
             if os.path.exists(os.path.join(directory_mag_data, 'paper_entities_{}_{}.pkl'.format(year, offset))):
                 print('paper_entities_{}_{}'.format(year, offset), 'already exists')
                 continue
-            paper_entities = evaluate('physics', year, count, offset)
+            paper_entities = evaluate(field_of_study.replace('_', ' '), year, count, offset)
             if not paper_entities:
                 continue
             save_pkl_file(directory_mag_data, 'paper_entities_{}_{}'.format(year, offset), paper_entities)

@@ -60,7 +60,7 @@ def calcHistogram(field, year):
     # This function returns the number of papers in the specific field in the given year.
 
     expr = "And(Composite(F.FN=='{}'),Y={})".format(field, year)
-    url = entity_engine_host + "calchistogram?expr={}".format(expr)
+    url = entity_engine_host + "calchistogram?expr={}&timeout=100000000".format(expr)
     result = request_url(url)
     if not result['num_entities']:
         return False

@@ -13,10 +13,14 @@ from utils.directories import *
 year_papernum = {}
 year_papernum_data = []
 start_year = 1800
-end_year = 2017
+end_year = 2018
+
+print()
 
 for year in range(end_year, start_year-1, -1):
-    papernum = calcHistogram('physics', year)
+    papernum = calcHistogram(field_of_study.replace('_', ' '), year)
+    if papernum == 0:
+        continue
     year_papernum[year] = papernum
     year_papernum_data.append([year, papernum])
     print(year, papernum)
