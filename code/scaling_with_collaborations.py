@@ -14,7 +14,7 @@ if __name__ == "__main__":
                                          '02_avg_impact_twoauthor-avg_internal_collab')
 
     # average impact three2six-author vs. average internal collaborations
-    cross_and_within_institution_scaling('avg_internal_collab', 'avg_impact_three2sixauthor',
+    cross_and_within_institution_scaling('avg_internal_collab', 'avg_impact_three2sizeauthor',
                                          directory_scaling_with_collaborations,
                                          '03_avg_impact_three2sixauthor-avg_internal_collab')
 
@@ -29,6 +29,6 @@ if __name__ == "__main__":
                                          '05_avg_impact_twoauthor-avg_external_indiv_collab')
 
     # average impact three-author vs. average external individual collaborations
-    cross_and_within_institution_scaling('avg_external_indiv_collab', 'avg_impact_three2sixauthor',
+    cross_and_within_institution_scaling('avg_external_indiv_collab', 'avg_impact_three2sizeauthor',
                                          directory_scaling_with_collaborations,
                                          '06_avg_impact_threeauthor-avg_external_indiv_collab')

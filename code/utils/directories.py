@@ -19,10 +19,10 @@ def prepare_dir(path):
             os.remove(os.path.join(path, '123.txt'))
 
 
-directory_root = ('/data/libo/hezihao/institutions_scaling/',
-                  "C:/Users/hezh/Documents/OneDrive/2018USC-ISI/institution_scaling")[0]
+directory_root = ['/data/libo/hezihao/institutions_scaling/',
+                  "C:/Users/hezh/Documents/OneDrive/2018USC-ISI/institution_scaling"][0]
 
-field_of_study = ('physics', 'computer_science', 'mathematics', 'sociology')[1]
+field_of_study = ('physics', 'computer_science', 'mathematics', 'sociology')[0]
 
 
 directory_data = os.path.join(directory_root, 'data', field_of_study)
@@ -38,10 +38,20 @@ directory_urn_model = os.path.join(directory_results, 'urn_model')
 directory_collab_of_institutions = os.path.join(directory_dataset_description, 'collab_of_institutions')
 directory_institution_description = os.path.join(directory_dataset_description, 'institution_description')
 
-directories = [directory_data, directory_papers, directory_mag_data, directory_institutions,
-               directory_results, directory_dataset_description,
-               directory_scaling_with_institution_size, directory_scaling_with_collaborations,
-               directory_urn_model, directory_collab_of_institutions, directory_institution_description]
+directory_figures = os.path.join(directory_root, 'figures', field_of_study)
+
+directories = [directory_data,
+               directory_papers,
+               directory_mag_data,
+               directory_institutions,
+               directory_results,
+               directory_dataset_description,
+               directory_scaling_with_institution_size,
+               directory_scaling_with_collaborations,
+               directory_urn_model,
+               directory_collab_of_institutions,
+               directory_institution_description,
+               directory_figures]
 
 if __name__ == '__main__':
     for directory in directories:
