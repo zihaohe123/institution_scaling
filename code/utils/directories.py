@@ -37,6 +37,7 @@ directory_scaling_with_collaborations = os.path.join(directory_results, 'scaling
 directory_urn_model = os.path.join(directory_results, 'urn_model')
 directory_collab_of_institutions = os.path.join(directory_dataset_description, 'collab_of_institutions')
 directory_institution_description = os.path.join(directory_dataset_description, 'institution_description')
+directory_author_collab = os.path.join(directory_dataset_description, 'author_collab')
 
 directory_figures = os.path.join(directory_root, 'figures', field_of_study)
 
@@ -51,7 +52,8 @@ directories = [directory_data,
                directory_urn_model,
                directory_collab_of_institutions,
                directory_institution_description,
-               directory_figures]
+               directory_figures,
+               directory_author_collab]
 
 if __name__ == '__main__':
     for directory in directories:

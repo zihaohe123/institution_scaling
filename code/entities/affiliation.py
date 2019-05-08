@@ -1,3 +1,6 @@
+import copy
+
+
 # definition of the affiliation entity of MAG data
 class Affiliation:
     def __init__(self, affId, aff_name):
@@ -9,11 +12,19 @@ class Affiliation:
         # properties related to affiliation size
         self.year_paperId_authorIds = {}
         self.year_authorIds = {}
+        self.year_authorId_paperIds = {}
         self.year_size = {}
-        self.year_cumul_authorIds = {} # cumulative authorIds up to that year
+        self.year_cumul_authorIds = {}  # cumulative authorIds up to that year
         self.year_cumul_size = {}   # cumulative size up to that year
 
         # properties related to collaborations
+        self.year_authorId_paperId_internal_collab = {}
+        self.year_authorId_paperId_external_collab = {}
+        self.year_authorId_paperId_indiv_collab = {}
+        self.year_authorId_internal_collab = {}
+        self.year_authorId_external_collab = {}
+        self.year_authorId_indiv_collab = {}
+
         self.year_paperId_internal_collab = {}
         self.year_paperId_external_inst_collab = {}
         self.year_paperId_external_indiv_collab = {}
@@ -45,42 +56,64 @@ class Affiliation:
         self.year_avg_teamsize = {}
         self.year_avg_internal_teamsize = {}
         self.year_avg_external_teamsize = {}
+        self.year_authorId_teamsizes = {}
+        self.year_authorId_avg_teamsize = {}
 
         # properties related to the overall citations and average impact
         self.year_paperId_citations = {}
         self.year_citations = {}
         self.year_avg_impact = {}
+        self.year_authorId_paperId_citations = {}
+        self.year_authorId_citations = {}
+        self.year_authorId_avg_impact = {}
 
         # properties related to citations and average impact from one-author papers
         self.year_paperId_citations_oneauthor = {}
         self.year_citations_oneauthor = {}
         self.year_avg_impact_oneauthor = {}
+        self.year_authorId_paperId_citations_oneauthor = {}
+        self.year_authorId_citations_oneauthor = {}
+        self.year_authorId_avg_impact_oneauthor = {}
 
         # properties related to citations and average impact from two-author papers
         self.year_paperId_citations_twoauthor = {}
         self.year_citations_twoauthor = {}
         self.year_avg_impact_twoauthor = {}
+        self.year_authorId_paperId_citations_twoauthor = {}
+        self.year_authorId_citations_twoauthor = {}
+        self.year_authorId_avg_impact_twoauthor = {}
 
         # properties related to citations and average impact from three-author papers
         self.year_paperId_citations_threeauthor = {}
         self.year_citations_threeauthor = {}
         self.year_avg_impact_threeauthor = {}
+        self.year_authorId_paperId_citations_threeauthor = {}
+        self.year_authorId_citations_threeauthor = {}
+        self.year_authorId_avg_impact_threeauthor = {}
 
         # properties related to citations and average impact from one-and-two-author papers
         self.year_paperId_citations_onetwoauthor = {}
         self.year_citations_onetwoauthor = {}
         self.year_avg_impact_onetwoauthor = {}
+        self.year_authorId_paperId_citations_onetwoauthor = {}
+        self.year_authorId_citations_onetwoauthor = {}
+        self.year_authorId_avg_impact_onetwoauthor = {}
 
         # properties related to citations and average impact from three-to-six-author papers
         self.year_paperId_citations_three2sixauthor = {}
         self.year_citations_three2sixauthor = {}
         self.year_avg_impact_three2sixauthor = {}
+        self.year_authorId_paperId_citations_three2sixauthor = {}
+        self.year_authorId_citations_three2sixauthor = {}
+        self.year_authorId_avg_impact_three2sixauthor = {}
 
         # this parameter is used to index the property
         self.propertyname_property = {}
 
-    def add_paper(self, year, authorIds, paperId, contribution, teamsize, internal_teamsize, external_teamsize,
-                  citations, internal_collab, external_inst_collab, external_indiv_collab,indiv_collab):
+    def add_paper(self, year, authorIds, external_authorIds, paperId, contribution,
+                  teamsize, internal_teamsize, external_teamsize,
+                  citations,
+                  internal_collab, external_inst_collab, external_indiv_collab, indiv_collab):
         """
         add a paper and update the concerning properties
         :param year: publication year
@@ -103,8 +136,15 @@ class Affiliation:
             self.year_paperId_authorIds[year] = {}
         if paperId not in self.year_paperId_authorIds[year]:
             self.year_paperId_authorIds[year][paperId] = set()
+        self.year_paperId_authorIds[year][paperId] = \
+            self.year_paperId_authorIds[year][paperId].union(authorIds)
+
+        if year not in self.year_authorId_paperIds:
+            self.year_authorId_paperIds[year] = {}
         for authorId in authorIds:
-            self.year_paperId_authorIds[year][paperId].add(authorId)
+            if authorId not in self.year_authorId_paperIds[year]:
+                self.year_authorId_paperIds[year][authorId] = set()
+            self.year_authorId_paperIds[year][authorId].add(paperId)
 
         # production and productivity
         if year not in self.year_paperId_contribution:
@@ -122,6 +162,13 @@ class Affiliation:
             self.year_paperId_external_teamsize[year] = {}
         self.year_paperId_external_teamsize[year][paperId] = external_teamsize
 
+        if year not in self.year_authorId_teamsizes:
+            self.year_authorId_teamsizes[year] = {}
+        for authorId in authorIds:
+            if authorId not in self.year_authorId_teamsizes[year]:
+                self.year_authorId_teamsizes[year][authorId] = []
+            self.year_authorId_teamsizes[year][authorId].append(len(authorIds)+len(external_authorIds))
+
         # collaborations
         if year not in self.year_paperId_internal_collab:
             self.year_paperId_internal_collab[year] = {}
@@ -137,10 +184,33 @@ class Affiliation:
             self.year_paperId_indiv_collab[year] = {}
         self.year_paperId_indiv_collab[year][paperId] = indiv_collab
 
+        if year not in self.year_authorId_paperId_internal_collab:
+            self.year_authorId_paperId_internal_collab[year] = {}
+            self.year_authorId_paperId_external_collab[year] = {}
+            self.year_authorId_paperId_indiv_collab[year] = {}
+        for authorId in authorIds:
+            if authorId not in self.year_authorId_paperId_internal_collab[year]:
+                self.year_authorId_paperId_internal_collab[year][authorId] = {}
+                self.year_authorId_paperId_external_collab[year][authorId] = {}
+                self.year_authorId_paperId_indiv_collab[year][authorId] = {}
+            internal_authorIds = copy.deepcopy(authorIds)
+            internal_authorIds.remove(authorId)
+            self.year_authorId_paperId_internal_collab[year][authorId][paperId] = internal_authorIds
+            self.year_authorId_paperId_external_collab[year][authorId][paperId] = external_authorIds
+            self.year_authorId_paperId_indiv_collab[year][authorId][paperId] = \
+                internal_authorIds.union(external_authorIds)
+
         # citations
         if year not in self.year_paperId_citations:
             self.year_paperId_citations[year] = {}
         self.year_paperId_citations[year][paperId] = citations
+
+        if year not in self.year_authorId_paperId_citations:
+            self.year_authorId_paperId_citations[year] = {}
+        for authorId in authorIds:
+            if authorId not in self.year_authorId_paperId_citations:
+                self.year_authorId_paperId_citations[year][authorId] = {}
+            self.year_authorId_paperId_citations[year][authorId][paperId] = citations
 
         # one-author paper citations
         if len(authorIds) == 1:
@@ -148,17 +218,37 @@ class Affiliation:
                 self.year_paperId_citations_oneauthor[year] = {}
             self.year_paperId_citations_oneauthor[year][paperId] = citations
 
+            if year not in self.year_authorId_paperId_citations_oneauthor:
+                self.year_authorId_paperId_citations_oneauthor[year] = {}
+            for authorId in authorIds:
+                if authorId not in self.year_authorId_paperId_citations_oneauthor:
+                    self.year_authorId_paperId_citations_oneauthor[year][authorId] = {}
+                self.year_authorId_paperId_citations_oneauthor[year][authorId][paperId] = citations
+
         # two-author paper citations
         if len(authorIds) == 2:
             if year not in self.year_paperId_citations_twoauthor:
                 self.year_paperId_citations_twoauthor[year] = {}
             self.year_paperId_citations_twoauthor[year][paperId] = citations
 
+            if year not in self.year_authorId_paperId_citations_twoauthor:
+                self.year_authorId_paperId_citations_twoauthor[year] = {}
+            for authorId in authorIds:
+                if authorId not in self.year_authorId_paperId_citations_twoauthor:
+                    self.year_authorId_paperId_citations_twoauthor[year][authorId] = {}
+                self.year_authorId_paperId_citations_twoauthor[year][authorId][paperId] = citations
+
         # three-author paper citations
         if len(authorIds) == 3:
             if year not in self.year_paperId_citations_threeauthor:
                 self.year_paperId_citations_threeauthor[year] = {}
             self.year_paperId_citations_threeauthor[year][paperId] = citations
+            if year not in self.year_authorId_paperId_citations_threeauthor:
+                self.year_authorId_paperId_citations_threeauthor[year] = {}
+            for authorId in authorIds:
+                if authorId not in self.year_authorId_paperId_citations_threeauthor:
+                    self.year_authorId_paperId_citations_threeauthor[year][authorId] = {}
+                self.year_authorId_paperId_citations_threeauthor[year][authorId][paperId] = citations
 
         # one-and-two-author paper citations
         if len(authorIds) in [1, 2]:
@@ -166,11 +256,25 @@ class Affiliation:
                 self.year_paperId_citations_onetwoauthor[year] = {}
             self.year_paperId_citations_onetwoauthor[year][paperId] = citations
 
+            if year not in self.year_authorId_paperId_citations_onetwoauthor:
+                self.year_authorId_paperId_citations_onetwoauthor[year] = {}
+            for authorId in authorIds:
+                if authorId not in self.year_authorId_paperId_citations_onetwoauthor:
+                    self.year_authorId_paperId_citations_onetwoauthor[year][authorId] = {}
+                self.year_authorId_paperId_citations_onetwoauthor[year][authorId][paperId] = citations
+
         # three-to-six-author paper citations
         if len(authorIds) in [3, 4, 5, 6]:
             if year not in self.year_paperId_citations_three2sixauthor:
                 self.year_paperId_citations_three2sixauthor[year] = {}
             self.year_paperId_citations_three2sixauthor[year][paperId] = citations
+
+            if year not in self.year_authorId_paperId_citations_three2sixauthor:
+                self.year_authorId_paperId_citations_three2sixauthor[year] = {}
+            for authorId in authorIds:
+                if authorId not in self.year_authorId_paperId_citations_three2sixauthor:
+                    self.year_authorId_paperId_citations_three2sixauthor[year][authorId] = {}
+                self.year_authorId_paperId_citations_three2sixauthor[year][authorId][paperId] = citations
 
     def update_affiliation(self):
         """
@@ -217,6 +321,18 @@ class Affiliation:
             self.year_cumul_internal_collab[year] = len(self.year_cumul_internal_collab[year]) // 2
             self.year_avg_internal_collab[year] = self.year_internal_collab[year] / self.year_size[year]
 
+        for year in self.year_authorId_paperId_internal_collab:
+            self.year_authorId_internal_collab[year] = {}
+            for authorId in self.year_authorId_paperId_internal_collab[year]:
+                if authorId not in self.year_authorId_internal_collab[year]:
+                    self.year_authorId_internal_collab[year][authorId] = set()
+                for paperId in self.year_authorId_paperId_internal_collab[year][authorId]:
+                    internal_collab = self.year_authorId_paperId_internal_collab[year][authorId][paperId]
+                    self.year_authorId_internal_collab[year][authorId] = self.year_authorId_internal_collab[year][authorId].union(internal_collab)
+        for year in self.year_authorId_internal_collab:
+            for authorId in self.year_authorId_internal_collab[year]:
+                self.year_authorId_internal_collab[year][authorId] = len(self.year_authorId_internal_collab[year][authorId])
+
         # external institutional collaborations
         for year in self.year_paperId_external_inst_collab:
             self.year_external_inst_collab[year] = set()
@@ -255,6 +371,18 @@ class Affiliation:
             self.year_cumul_external_indiv_collab[year] = len(self.year_cumul_external_indiv_collab[year]) // 2
             self.year_avg_external_indiv_collab[year] = self.year_external_indiv_collab[year] / self.year_size[year]
 
+        for year in self.year_authorId_paperId_external_collab:
+            self.year_authorId_external_collab[year] = {}
+            for authorId in self.year_authorId_paperId_external_collab[year]:
+                if authorId not in self.year_authorId_external_collab[year]:
+                    self.year_authorId_external_collab[year][authorId] = set()
+                for paperId in self.year_authorId_paperId_external_collab[year][authorId]:
+                    external_collab = self.year_authorId_paperId_external_collab[year][authorId][paperId]
+                    self.year_authorId_external_collab[year][authorId] = self.year_authorId_external_collab[year][authorId].union(external_collab)
+        for year in self.year_authorId_external_collab:
+            for authorId in self.year_authorId_external_collab[year]:
+                self.year_authorId_external_collab[year][authorId] = len(self.year_authorId_external_collab[year][authorId])
+
         # individual collaborations
         for year in self.year_paperId_indiv_collab:
             self.year_indiv_collab[year] = set()
@@ -273,6 +401,18 @@ class Affiliation:
             self.year_indiv_collab[year] = len(self.year_indiv_collab[year]) // 2
             self.year_cumul_indiv_collab[year] = len(self.year_cumul_indiv_collab[year]) // 2
             self.year_avg_indiv_collab[year] = self.year_indiv_collab[year] / self.year_size[year]
+
+        for year in self.year_authorId_paperId_indiv_collab:
+            self.year_authorId_indiv_collab[year] = {}
+            for authorId in self.year_authorId_paperId_indiv_collab[year]:
+                if authorId not in self.year_authorId_indiv_collab[year]:
+                    self.year_authorId_indiv_collab[year][authorId] = set()
+                for paperId in self.year_authorId_paperId_indiv_collab[year][authorId]:
+                    indiv_collab = self.year_authorId_paperId_indiv_collab[year][authorId][paperId]
+                    self.year_authorId_indiv_collab[year][authorId] = self.year_authorId_indiv_collab[year][authorId].union(indiv_collab)
+        for year in self.year_authorId_indiv_collab:
+            for authorId in self.year_authorId_indiv_collab[year]:
+                self.year_authorId_indiv_collab[year][authorId] = len(self.year_authorId_indiv_collab[year][authorId])
 
         # production and productivity
         for year in self.year_paperId_authorIds:
@@ -298,12 +438,28 @@ class Affiliation:
         for year in self.year_paperId_external_teamsize:
             self.year_avg_external_teamsize[year] = sum(self.year_paperId_external_teamsize[year].values()) / len(self.year_paperId_external_teamsize[year])
 
+        for year in self.year_authorId_teamsizes:
+            if year not in self.year_authorId_avg_teamsize:
+                self.year_authorId_avg_teamsize[year] = {}
+            for authorId in self.year_authorId_teamsizes[year]:
+                self.year_authorId_avg_teamsize[year][authorId] = \
+                    sum(self.year_authorId_teamsizes[year][authorId]) / len(self.year_authorId_teamsizes[year][authorId])
+
         # citations and average impact
         for year in self.year_paperId_citations:
             self.year_citations[year] = sum(self.year_paperId_citations[year].values())
         for year in self.year_citations:
             self.year_avg_impact[year] = 0 if len(self.year_citations) == 0 \
                 else self.year_citations[year] / len(self.year_paperId_citations[year])
+
+        for year in self.year_authorId_paperId_citations:
+            if year not in self.year_authorId_citations:
+                self.year_authorId_citations[year] = {}
+                self.year_authorId_avg_impact[year] = {}
+            for authorId in self.year_authorId_paperId_citations[year]:
+                self.year_authorId_citations[year][authorId] = sum(self.year_authorId_paperId_citations[year][authorId].values())
+                self.year_authorId_avg_impact[year] = 0 if len(self.year_authorId_paperId_citations[year][authorId]) == 0 \
+                    else self.year_authorId_citations[year][authorId] / len(self.year_authorId_paperId_citations[year][authorId])
 
         # citations and average impact of one-author papers
         for year in self.year_paperId_citations_oneauthor:
@@ -312,12 +468,30 @@ class Affiliation:
             self.year_avg_impact_oneauthor[year] = 0 if len(self.year_citations_oneauthor) == 0 \
                 else self.year_citations_oneauthor[year] / len(self.year_paperId_citations_oneauthor[year])
 
+        for year in self.year_authorId_paperId_citations_oneauthor:
+            if year not in self.year_authorId_citations_oneauthor:
+                self.year_authorId_citations_oneauthor[year] = {}
+                self.year_authorId_avg_impact_oneauthor[year] = {}
+            for authorId in self.year_authorId_paperId_citations_oneauthor[year]:
+                self.year_authorId_citations_oneauthor[year][authorId] = sum(self.year_authorId_paperId_citations_oneauthor[year][authorId].values())
+                self.year_authorId_avg_impact_oneauthor[year][authorId] = 0 if len(self.year_authorId_paperId_citations_oneauthor[year][authorId]) == 0 \
+                    else self.year_authorId_citations_oneauthor[year][authorId] / len(self.year_authorId_paperId_citations_oneauthor[year][authorId])
+
         # citations and average impact of two-author papers
         for year in self.year_paperId_citations_twoauthor:
             self.year_citations_twoauthor[year] = sum(self.year_paperId_citations_twoauthor[year].values())
         for year in self.year_citations_twoauthor:
             self.year_avg_impact_twoauthor[year] = 0 if len(self.year_citations_twoauthor) == 0 \
                 else self.year_citations_twoauthor[year] / len(self.year_paperId_citations_twoauthor[year])
+
+        for year in self.year_authorId_paperId_citations_twoauthor:
+            if year not in self.year_authorId_citations_twoauthor:
+                self.year_authorId_citations_twoauthor[year] = {}
+                self.year_authorId_avg_impact_twoauthor[year] = {}
+            for authorId in self.year_authorId_paperId_citations_twoauthor[year]:
+                self.year_authorId_citations_twoauthor[year][authorId] = sum(self.year_authorId_paperId_citations_twoauthor[year][authorId].values())
+                self.year_authorId_avg_impact_twoauthor[year][authorId] = 0 if len(self.year_authorId_paperId_citations_twoauthor[year][authorId]) == 0 \
+                    else self.year_authorId_citations_twoauthor[year][authorId] / len(self.year_authorId_paperId_citations_twoauthor[year][authorId])
 
         # citations and average impact of three-author papers
         for year in self.year_paperId_citations_threeauthor:
@@ -327,6 +501,15 @@ class Affiliation:
             self.year_avg_impact_threeauthor[year] = 0 if len(self.year_citations_threeauthor) == 0 \
                 else self.year_citations_threeauthor[year] / len(self.year_paperId_citations_threeauthor[year])
 
+        for year in self.year_authorId_paperId_citations_threeauthor:
+            if year not in self.year_authorId_citations_threeauthor:
+                self.year_authorId_citations_threeauthor[year] = {}
+                self.year_authorId_avg_impact_threeauthor[year] = {}
+            for authorId in self.year_authorId_paperId_citations_threeauthor[year]:
+                self.year_authorId_citations_threeauthor[year][authorId] = sum(self.year_authorId_paperId_citations_threeauthor[year][authorId].values())
+                self.year_authorId_avg_impact_threeauthor[year][authorId] = 0 if len(self.year_authorId_paperId_citations_threeauthor[year][authorId]) == 0 \
+                    else self.year_authorId_citations_threeauthor[year][authorId] / len(self.year_authorId_paperId_citations_threeauthor[year][authorId])
+
         # citations and average impact of one-and-two-author papers
         for year in self.year_paperId_citations_onetwoauthor:
             self.year_citations_onetwoauthor[year] = sum(self.year_paperId_citations_onetwoauthor[year].values())
@@ -334,12 +517,30 @@ class Affiliation:
             self.year_avg_impact_onetwoauthor[year] = 0 if len(self.year_citations_onetwoauthor) == 0 \
                 else self.year_citations_onetwoauthor[year] / len(self.year_paperId_citations_onetwoauthor[year])
 
+        for year in self.year_authorId_paperId_citations_onetwoauthor:
+            if year not in self.year_authorId_citations_onetwoauthor:
+                self.year_authorId_citations_onetwoauthor[year] = {}
+                self.year_authorId_avg_impact_onetwoauthor[year] = {}
+            for authorId in self.year_authorId_paperId_citations_onetwoauthor[year]:
+                self.year_authorId_citations_onetwoauthor[year][authorId] = sum(self.year_authorId_paperId_citations_onetwoauthor[year][authorId].values())
+                self.year_authorId_avg_impact_onetwoauthor[year][authorId] = 0 if len(self.year_authorId_paperId_citations_onetwoauthor[year][authorId]) == 0 \
+                    else self.year_authorId_citations_onetwoauthor[year][authorId] / len(self.year_authorId_paperId_citations_onetwoauthor[year][authorId])
+
         # citations and average impact of three-to-six-author papers
         for year in self.year_paperId_citations_three2sixauthor:
             self.year_citations_three2sixauthor[year] = sum(self.year_paperId_citations_three2sixauthor[year].values())
         for year in self.year_citations_three2sixauthor:
             self.year_avg_impact_three2sixauthor[year] = 0 if len(self.year_citations_three2sixauthor) == 0 \
                 else self.year_citations_three2sixauthor[year] / len(self.year_paperId_citations_three2sixauthor[year])
+
+        for year in self.year_authorId_paperId_citations_three2sixauthor:
+            if year not in self.year_authorId_citations_three2sixauthor:
+                self.year_authorId_citations_three2sixauthor[year] = {}
+                self.year_authorId_avg_impact_three2sixauthor[year] = {}
+            for authorId in self.year_authorId_paperId_citations_three2sixauthor[year]:
+                self.year_authorId_citations_three2sixauthor[year][authorId] = sum(self.year_authorId_paperId_citations_three2sixauthor[year][authorId].values())
+                self.year_authorId_avg_impact_three2sixauthor[year][authorId] = 0 if len(self.year_authorId_paperId_citations_three2sixauthor[year][authorId]) == 0 \
+                    else self.year_authorId_citations_three2sixauthor[year][authorId] / len(self.year_authorId_paperId_citations_three2sixauthor[year][authorId])
 
         # release the memory of paper-specific properties that will not be used anymore
         self.year_paperId_authorIds = {}
@@ -360,30 +561,20 @@ class Affiliation:
         self.year_paperId_citations_onetwoauthor = {}
         self.year_paperId_citations_three2sixauthor = {}
 
-        self.propertyname_property = {
-            'size': self.year_size,
-            'cumul_size': self.year_cumul_size,
-            'internal_collab': self.year_internal_collab,
-            'external_inst_collab': self.year_external_inst_collab,
-            'external_indiv_collab': self.year_external_indiv_collab,
-            'indiv_collab': self.year_indiv_collab,
-            'cumul_internal_collab': self.year_cumul_internal_collab,
-            'cumul_external_inst_collab': self.year_cumul_external_inst_collab,
-            'cumul_external_indiv_collab': self.year_cumul_external_indiv_collab,
-            'cumul_indiv_collab': self.year_indiv_collab,
-            'avg_internal_collab': self.year_avg_internal_collab,
-            'avg_external_inst_collab': self.year_avg_external_inst_collab,
-            'avg_external_indiv_collab': self.year_avg_external_indiv_collab,
-            'avg_indiv_collab': self.year_avg_indiv_collab,
-            'production': self.year_production,
-            'productivity': self.year_productivity,
-            'avg_teamsize': self.year_avg_teamsize,
-            'avg_internal_teamsize': self.year_avg_internal_teamsize,
-            'avg_external_teamsize': self.year_avg_external_teamsize,
-            'avg_impact': self.year_avg_impact,
-            'avg_impact_oneauthor': self.year_avg_impact_oneauthor,
-            'avg_impact_twoauthor': self.year_avg_impact_twoauthor,
-            'avg_impact_threeauthor': self.year_avg_impact_threeauthor,
-            'avg_impact_onetwoauthor': self.year_avg_impact_onetwoauthor,
-            'avg_impact_three2sizeauthor': self.year_avg_impact_three2sixauthor,
-        }
+
+        self.year_authorId_paperId_internal_collab = {}
+        self.year_authorId_paperId_external_collab = {}
+        self.year_authorId_paperId_indiv_collab = {}
+        self.year_authorId_teamsizes = {}
+        self.year_authorId_paperId_citations = {}
+        self.year_authorId_citations = {}
+        self.year_authorId_paperId_citations_oneauthor = {}
+        self.year_authorId_citations_oneauthor = {}
+        self.year_authorId_paperId_citations_twoauthor = {}
+        self.year_authorId_citations_twoauthor = {}
+        self.year_authorId_paperId_citations_threeauthor = {}
+        self.year_authorId_citations_threeauthor = {}
+        self.year_authorId_paperId_citations_onetwoauthor = {}
+        self.year_authorId_citations_onetwoauthor = {}
+        self.year_authorId_paperId_citations_three2sixauthor = {}
+        self.year_authorId_citations_three2sixauthor = {}

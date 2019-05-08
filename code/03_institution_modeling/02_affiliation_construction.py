@@ -77,6 +77,7 @@ def construct_affiliations_from_papers(paperIds, affId):
 
         affiliation.add_paper(year=year,
                               authorIds=internal_authorIds,
+                              external_authorIds=external_authorIds,
                               paperId=paperId,
                               contribution=contribution,
                               teamsize=teamsize,

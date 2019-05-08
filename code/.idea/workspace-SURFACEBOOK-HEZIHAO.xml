@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/urn_model/02_author_institution_sequence.py" description="        num += 1&#10;        if num % 1000 == 0:&#10;     ..." line="17" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="244e1e0a-94ea-4eaa-a0c8-46a93af98ef1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03_institution_modeling/02_affiliation_construction.py" beforeDir="false" afterPath="$PROJECT_DIR$/03_institution_modeling/02_affiliation_construction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities/affiliation.py" beforeDir="false" afterPath="$PROJECT_DIR$/entities/affiliation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/excel_io.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/institution_scaling.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/institution_scaling.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/plotting.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/plotting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../results/physics/scaling_with_institution_size/09_productivity_within.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../results/physics/scaling_with_institution_size/09_productivity_within.xlsx" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/code$02_author_institution_sequence.coverage" NAME="02_author_institution_sequence Coverage Results" MODIFIED="1553434248051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/urn_model" />
+    <SUITE FILE_PATH="coverage/code$01_paper_cleaning.coverage" NAME="01_paper_cleaning Coverage Results" MODIFIED="1553936472755" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/02_paper_modeling" />
+    <SUITE FILE_PATH="coverage/code$01_year_papernum.coverage" NAME="01_year_papernum Coverage Results" MODIFIED="1555153480188" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/01_mag_data_preprocessing" />
+    <SUITE FILE_PATH="coverage/code$05_mean_entropy.coverage" NAME="05_mean_entropy Coverage Results" MODIFIED="1553302076000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/urn_model" />
+    <SUITE FILE_PATH="coverage/code2$01_year_papernum.coverage" NAME="01_year_papernum Coverage Results" MODIFIED="1553159039729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mag_data_preprocessing" />
+    <SUITE FILE_PATH="coverage/code$main.coverage" NAME="main Coverage Results" MODIFIED="1554506197656" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/code$scaling_with_collaborations.coverage" NAME="scaling_with_collaborations Coverage Results" MODIFIED="1556901768497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/code$directories.coverage" NAME="directories Coverage Results" MODIFIED="1555690384157" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+    <SUITE FILE_PATH="coverage/code2$excel_io.coverage" NAME="excel_io Coverage Results" MODIFIED="1553093544276" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="code" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/directories.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/institution_scaling.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="798">
+              <caret line="140" column="80" lean-forward="true" selection-start-line="140" selection-start-column="80" selection-end-line="140" selection-end-column="80" />
+              <folding>
+                <element signature="e#37#90#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/03_institution_modeling/02_affiliation_construction.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="630">
+              <caret line="78" column="58" selection-start-line="78" selection-start-column="40" selection-end-line="78" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/entities/affiliation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="483">
+              <caret line="167" selection-start-line="167" selection-end-line="167" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>size</find>
+      <find>cumul</find>
+      <find>internal_collab</find>
+      <find>add_folder</find>
+      <find>data</find>
+      <find>print</find>
+      <find>avg_teamsize</find>
+      <find>make_dir</find>
+      <find>len(np.arange(x.min(), x.max(), 1))</find>
+      <find>legend</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/05_scaling_with_institution_size/01_internal_collab_within.py" />
+        <option value="$PROJECT_DIR$/05_scaling_with_institution_size/01_internal_collab_cross.py" />
+        <option value="$PROJECT_DIR$/05_scaling_with_institution_size/01_internal_collab.py" />
+        <option value="$PROJECT_DIR$/05_scaling_with_institution_size/02_external_inst_collab.py" />
+        <option value="$PROJECT_DIR$/05_scaling_with_institution_size/03_external_indiv_collab.py" />
+        <option value="$PROJECT_DIR$/05_scaling_with_institution_size/04_indiv_collab.py" />
+        <option value="$PROJECT_DIR$/04_dataset_description/02_year_culmu_affIds.py" />
+        <option value="$PROJECT_DIR$/02_paper_modeling/03_citation_network.py" />
+        <option value="$PROJECT_DIR$/02_paper_modeling/04_paper_construction.py" />
+        <option value="$PROJECT_DIR$/utils/entity_io.py" />
+        <option value="$PROJECT_DIR$/urn_model/01_cumul_instutions-cumul_researchers.py" />
+        <option value="$PROJECT_DIR$/urn_model/01_paperId_date.py" />
+        <option value="$PROJECT_DIR$/urn_model/03_cumul_affIds-cumul_authorIds.py" />
+        <option value="$PROJECT_DIR$/urn_model/04_Zeapf's_law.py" />
+        <option value="$PROJECT_DIR$/urn_model/06_triggering_intervals.py" />
+        <option value="$PROJECT_DIR$/urn_model/03_Heap's_law.py" />
+        <option value="$PROJECT_DIR$/urn_model/05_mean_entropy.py" />
+        <option value="$PROJECT_DIR$/pkl_file_example.py" />
+        <option value="$PROJECT_DIR$/urn_model/pkl_file_example.py" />
+        <option value="$PROJECT_DIR$/utils/traverse_paper_entity.py" />
+        <option value="$PROJECT_DIR$/utils/reshape_list.py" />
+        <option value="$PROJECT_DIR$/urn_model/shuffle.py" />
+        <option value="$PROJECT_DIR$/urn_model/test.py" />
+        <option value="$PROJECT_DIR$/urn_model/02_author_institution_sequence.py" />
+        <option value="$PROJECT_DIR$/urn_model/03_model_hires.py" />
+        <option value="$PROJECT_DIR$/urn_model/model_occurences_of_hires_subsequence.py" />
+        <option value="$PROJECT_DIR$/urn_model/model_occurrences_of_hires_subsequence.py" />
+        <option value="$PROJECT_DIR$/urn_model/model_occurrences_of_hires.py" />
+        <option value="$PROJECT_DIR$/entities/paper.py" />
+        <option value="$PROJECT_DIR$/03_institution_modeling/01_affiliation_papers.py" />
+        <option value="$PROJECT_DIR$/02_paper_modeling/01_paper_cleaning.py" />
+        <option value="$PROJECT_DIR$/utils/pkl_io.py" />
+        <option value="$PROJECT_DIR$/02_paper_modeling/02_paper_references.py" />
+        <option value="$PROJECT_DIR$/main2.py" />
+        <option value="$PROJECT_DIR$/utils/linear_fitting_with_errors.py" />
+        <option value="$PROJECT_DIR$/utils/123/123.txt.py" />
+        <option value="$PROJECT_DIR$/utils/microsoft_academic_makes.py" />
+        <option value="$PROJECT_DIR$/01_mag_data_preprocessing/02_paper_downloading.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/01_mag_data_preprocessing/01_year_papernum.py" />
+        <option value="$PROJECT_DIR$/03_institution_modeling/03_output_affiliation.py" />
+        <option value="$PROJECT_DIR$/urn_model/01_authorId_sequence&amp;affId_sequence.py" />
+        <option value="$PROJECT_DIR$/utils/linear_regression.py" />
+        <option value="$PROJECT_DIR$/utils/directories.py" />
+        <option value="$PROJECT_DIR$/scaling_with_collaborations.py" />
+        <option value="$PROJECT_DIR$/scaling_with_institution_size.py" />
+        <option value="$PROJECT_DIR$/utils/plotting.py" />
+        <option value="$PROJECT_DIR$/utils/excel_io.py" />
+        <option value="$PROJECT_DIR$/utils/institution_scaling.py" />
+        <option value="$PROJECT_DIR$/03_institution_modeling/02_affiliation_construction.py" />
+        <option value="$PROJECT_DIR$/entities/affiliation.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-10" />
+    <option name="width" value="1642" />
+    <option name="height" value="2092" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="03_institution_modeling" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hezh\Documents\OneDrive\2018USC-ISI\institution_scaling\code\urn_model" />
+      <recent name="C:\Users\hezh\Documents\OneDrive\2018USC-ISI\institution_scaling2\code\utils" />
+      <recent name="C:\Users\hezh\Documents\OneDrive\2018USC-ISI\institution scaling\code" />
+      <recent name="C:\Users\hezh\Documents\OneDrive\2018USC-ISI\institution scaling\code\04_institution_scaling_cross_institution" />
+      <recent name="C:\Users\hezh\Documents\OneDrive\2018USC-ISI\Institution_Scaling\code2\paper_modeling" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\hezh\Documents\OneDrive\2018USC-ISI\institution scaling\code\05_institution_scaling_within_institution" />
+      <recent name="C:\Users\hezh\Documents\OneDrive\2018USC-ISI\Institution_Scaling\code2" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.scaling_with_collaborations">
+    <configuration name="01_paper_cleaning" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="code2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/02_paper_modeling" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/02_paper_modeling/01_paper_cleaning.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="01_year_papernum" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="code2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/01_mag_data_preprocessing" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/01_mag_data_preprocessing/01_year_papernum.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="directories" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="code2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/directories.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="code2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="scaling_with_collaborations" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="code2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scaling_with_collaborations.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.scaling_with_collaborations" />
+        <item itemvalue="Python.directories" />
+        <item itemvalue="Python.01_year_papernum" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.01_paper_cleaning" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="244e1e0a-94ea-4eaa-a0c8-46a93af98ef1" name="Default Changelist" comment="" />
+      <created>1551425598551</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1551425598551</updated>
+      <workItem from="1551425599906" duration="1615000" />
+      <workItem from="1551444531478" duration="955000" />
+      <workItem from="1553084627153" duration="573000" />
+      <workItem from="1553085238562" duration="34861000" />
+      <workItem from="1553174441261" duration="18782000" />
+      <workItem from="1553242114488" duration="17035000" />
+      <workItem from="1553268227070" duration="17395000" />
+      <workItem from="1553428529812" duration="35517000" />
+      <workItem from="1553662876798" duration="12482000" />
+      <workItem from="1553780565523" duration="3227000" />
+      <workItem from="1553869812300" duration="1109000" />
+      <workItem from="1553872659773" duration="853000" />
+      <workItem from="1553880604795" duration="594000" />
+      <workItem from="1553936032595" duration="914000" />
+      <workItem from="1553942216291" duration="3317000" />
+      <workItem from="1554024323306" duration="4492000" />
+      <workItem from="1554046641905" duration="907000" />
+      <workItem from="1554197485321" duration="2983000" />
+      <workItem from="1554474569081" duration="15210000" />
+      <workItem from="1554817446650" duration="1724000" />
+      <workItem from="1554822775360" duration="4853000" />
+      <workItem from="1555082809139" duration="23476000" />
+      <workItem from="1555485427725" duration="642000" />
+      <workItem from="1555673274608" duration="45000" />
+      <workItem from="1555673365514" duration="21165000" />
+      <workItem from="1555861395054" duration="2758000" />
+      <workItem from="1556422518036" duration="237000" />
+      <workItem from="1556896540232" duration="5399000" />
+      <workItem from="1557120086363" duration="166000" />
+      <workItem from="1557120270245" duration="11043000" />
+      <workItem from="1557152586252" duration="6334000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="250663000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-6" y="-6" width="1633" height="1053" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49867374" visible="true" weight="0.05206349" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" sideWeight="0.50132626" side_tool="true" weight="0.11174603" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.40347072" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.28958786" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.2559653" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="File Transfer" order="9" sideWeight="0.49946752" weight="0.20390455" />
+      <window_info anchor="bottom" id="Database Changes" order="10" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.17425743" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5005325" side_tool="true" weight="0.24653466" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="13" visible="true" weight="0.37310195" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Remote Host" order="3" weight="0.17015873" />
+      <window_info anchor="right" id="SciView" order="4" weight="0.1784127" />
+      <window_info anchor="right" id="Database" order="5" weight="0.32896462" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1231746" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30802602" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="File Transfer" order="9" weight="0.17678958" />
+      <window_info anchor="bottom" id="Database Changes" order="10" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.5173536" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="13" visible="true" weight="0.21366595" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Remote Host" order="3" weight="0.07111111" />
+      <window_info anchor="right" id="SciView" order="4" />
+      <window_info anchor="right" id="Database" order="5" weight="0.32896462" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/06_scaling_with_collaborations/02_impact_twoauthor-avg_internal_collab_cross.py" />
+    <entry file="file://$PROJECT_DIR$/06_scaling_with_collaborations/06_impact_three2sixauthor-avg_external_indiv_collab_cross.py" />
+    <entry file="file://$PROJECT_DIR$/06_scaling_with_collaborations/05_impact_twoauthor-avg_external_indiv_collab_cross.py" />
+    <entry file="file://$PROJECT_DIR$/06_scaling_with_collaborations/04_impact_oneauthor-avg_external_indiv_collab_cross.py" />
+    <entry file="file://$PROJECT_DIR$/urn_model/01_cumul_instutions-cumul_researchers.py" />
+    <entry file="file://$PROJECT_DIR$/urn_model/04_Zeapf's_law.py" />
+    <entry file="file://$PROJECT_DIR$/urn_model/pkl_file_example.py" />
+    <entry file="file://C:/Program Files/Python/Python36/Lib/codecs.py" />
+    <entry file="file://$PROJECT_DIR$/urn_model/03_Heap's_law.py" />
+    <entry file="file://$PROJECT_DIR$/urn_model/05_mean_entropy.py" />
+    <entry file="file://$PROJECT_DIR$/urn_model/06_inter_event_time.py" />
+    <entry file="file://$PROJECT_DIR$/utils/reshape_array.py" />
+    <entry file="file://$PROJECT_DIR$/urn_model/test.py" />
+    <entry file="file://$PROJECT_DIR$/utils/traverse_paper_entity.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/urn_model/03_model_hires.py" />
+    <entry file="file://$PROJECT_DIR$/urn_model/model_occurrences_of_hires_subsequence.py" />
+    <entry file="file://$PROJECT_DIR$/02_paper_modeling/04_paper_construction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entities/paper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="31" column="33" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02_paper_modeling/02_paper_references.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="29" column="90" selection-start-line="29" selection-start-column="90" selection-end-line="29" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/pkl_io.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03_institution_modeling/01_affiliation_papers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main2.py" />
+    <entry file="file://$PROJECT_DIR$/utils/linear_fitting_with_errors.py" />
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/sklearn/gaussian_process/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/02_paper_modeling/03_citation_network.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/123/2345.txt" />
+    <entry file="file://$PROJECT_DIR$/utils/123/123.txt.py" />
+    <entry file="file://$PROJECT_DIR$/utils/123/123.txt" />
+    <entry file="file://$PROJECT_DIR$/utils/123/1234.txt" />
+    <entry file="file://$PROJECT_DIR$/utils/entity_io.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01_mag_data_preprocessing/02_paper_downloading.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="3" lean-forward="true" selection-start-column="3" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/urn_model/01_authorId_sequence&amp;affId_sequence.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03_institution_modeling/03_output_affiliation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/urn_model/02_author_institution_sequence.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02_paper_modeling/01_paper_cleaning.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="35" column="34" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/scipy/stats/_stats_mstats_common.py" />
+    <entry file="file://$PROJECT_DIR$/01_mag_data_preprocessing/01_year_papernum.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/microsoft_academic_makes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="712">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
+          <folding>
+            <element signature="e#305#326#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/python_stubs/-1204195383/builtins.py" />
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/numpy/lib/histograms.py" />
+    <entry file="file://$PROJECT_DIR$/urn_model/model_occurrences_of_hires.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3570">
+          <caret line="170" column="20" selection-start-line="170" selection-start-column="20" selection-end-line="170" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/linear_regression.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/excel_io.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1638">
+          <caret line="81" lean-forward="true" selection-end-line="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/plotting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1155">
+          <caret line="55" column="78" selection-start-line="55" selection-start-column="78" selection-end-line="55" selection-end-column="78" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scaling_with_institution_size.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="40" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scaling_with_collaborations.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="39" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/directories.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/institution_scaling.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="140" column="80" lean-forward="true" selection-start-line="140" selection-start-column="80" selection-end-line="140" selection-end-column="80" />
+          <folding>
+            <element signature="e#37#90#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03_institution_modeling/02_affiliation_construction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="78" column="58" selection-start-line="78" selection-start-column="40" selection-end-line="78" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entities/affiliation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="167" selection-start-line="167" selection-end-line="167" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

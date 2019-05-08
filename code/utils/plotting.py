@@ -56,18 +56,13 @@ def get_column(matrix, col):
 def line_plot(x, y, slope, intercept, r2, xlabel, ylabel, filepath, filename):
     x = np.asarray(x)
     y = np.asarray(y)
-    # data = [[i, j] for i, j in zip(x, y)]
-    # data = np.asarray(data)
-    # slope, intercept, r2, p_value, std_err = linear_regression(data)
-    # if np.isnan(slope):
-    #     raise ValueError("Invalid Data")
+
     a = math.pow(10, intercept)
     b = slope
 
     min_x, max_x = min(x), max(x)
     x_pred = np.linspace(min_x, max_x, 1000)
-    y_pred = [a*math.pow(each_x_pred, b) for each_x_pred in x_pred]
-
+    y_pred = np.asarray([a*math.pow(each_x_pred, b) for each_x_pred in x_pred])
 
     p_y = [a*math.pow(each_x_pred, b) for each_x_pred in x]
     y_err = y - p_y
@@ -92,6 +87,7 @@ def line_plot(x, y, slope, intercept, r2, xlabel, ylabel, filepath, filename):
     #         continue
     #     if color1 != color2:
     #         break
+
     plt.scatter(x, y, s=15, c='black', alpha=0.4)
     plt.plot(x_pred, y_pred, linewidth=3, c='red')
     plt.fill_between(x_pred, lower, upper, color='blue', alpha=0.4)
@@ -128,12 +124,11 @@ def curve_plot(x, y, xlabel, ylabel, filepath, filename):
 
 def histogram_plot(x, xlabel, filepath, filename):
     hist, bins = np.histogram(x)
-    plt.hist(x, bins=bins,density=True)
+    plt.hist(x, bins=bins, density=True)
 
     plt.xticks(fontsize=18)
     plt.yticks(fontsize=18)
     plt.xlabel(xlabel, fontsize=18)
-
 
     pdf = PdfPages(os.path.join(filepath, filename+'.pdf'))
     pdf.savefig(bbox_inches='tight')
