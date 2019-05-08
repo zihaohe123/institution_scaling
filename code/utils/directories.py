@@ -22,7 +22,7 @@ def prepare_dir(path):
 directory_root = ['/data/libo/hezihao/institutions_scaling/',
                   "C:/Users/hezh/Documents/OneDrive/2018USC-ISI/institution_scaling"][0]
 
-field_of_study = ('physics', 'computer_science', 'mathematics', 'sociology')[0]
+field_of_study = ('physics', 'computer_science', 'mathematics', 'sociology')[1]
 
 
 directory_data = os.path.join(directory_root, 'data', field_of_study)
