@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="tsinghua_sz" showDialogOnRemoteDnD="false">
+  <component name="PublishConfigData" autoUpload="Always" serverName="shenzhen-131" showDialogOnRemoteDnD="false">
     <serverData>
-      <paths name="tsinghua_sz">
+      <paths name="shenzhen-131">
         <serverdata>
           <mappings>
             <mapping deploy="/institutions_scaling/code" local="$PROJECT_DIR$" web="/" />

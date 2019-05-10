@@ -1,5 +1,5 @@
 """
-This script records the affiliation and its published papers
+This script records each author and the first year the author appeared
 """
 
 import sys
@@ -11,23 +11,19 @@ import time
 
 if __name__ == '__main__':
     paperIds = open_pkl_file(directory_dataset_description, 'paperIds')
-    affId_paperIds = {}
+    authorId_first_year = {}
     num = 0
     for paperId in paperIds:
         paper = open_paper(paperId)
         num += 1
         if num % 1000 == 0:
             print(num, '/', len(paperIds), ',', time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
-        authorIds = set()
+        year = paper.year
         for author in paper.authors:
             authorId = author.authorId
-            if authorId in authorIds:
-                continue
-            authorIds.add(authorId)
-            affId = author.affId
-            if affId not in affId_paperIds:
-                affId_paperIds[affId] = []
-            affId_paperIds[affId].append(paperId)
+            if authorId not in authorId_first_year:
+                authorId_first_year[authorId] = year
+            else:
+                authorId_first_year[authorId] = min(authorId_first_year[authorId], year)
 
-    save_pkl_file(directory_dataset_description, 'affId_paperIds', affId_paperIds)
-    save_pkl_file(directory_dataset_description, 'affIds', list(affId_paperIds.keys()))
+    save_pkl_file(directory_dataset_description, 'authorId_first_year', authorId_first_year)

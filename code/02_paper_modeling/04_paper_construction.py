@@ -20,7 +20,10 @@ def read_paper(paper_file, citations):
 
     authors = []
     for author in paper_file['AA']:
-        authors.append(Author(author['DAuN'], author['AuId'], author['DAfN'], author['AfId']))
+        authors.append(Author(author_name=author['DAuN'],
+                              authorId=author['AuId'],
+                              aff_name=author['DAfN'],
+                              affId=author['AfId']))
 
     paper = Paper(paperId=paperId,
                   title=title,

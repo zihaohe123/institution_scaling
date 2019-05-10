@@ -1,5 +1,5 @@
 import copy
-
+from utils.seniority import get_seniority
 
 # definition of the affiliation entity of MAG data
 class Affiliation:
@@ -107,8 +107,11 @@ class Affiliation:
         self.year_authorId_citations_three2sixauthor = {}
         self.year_authorId_avg_impact_three2sixauthor = {}
 
-        # this parameter is used to index the property
-        self.propertyname_property = {}
+        # properties related to seniority
+        self.year_authorIds_5 = {}
+        self.year_authorIds_10 = {}
+        self.year_authorIds_15 = {}
+        self.year_authorIds_20 = {}
 
     def add_paper(self, year, authorIds, external_authorIds, paperId, contribution,
                   teamsize, internal_teamsize, external_teamsize,
@@ -276,7 +279,7 @@ class Affiliation:
                     self.year_authorId_paperId_citations_three2sixauthor[year][authorId] = {}
                 self.year_authorId_paperId_citations_three2sixauthor[year][authorId][paperId] = citations
 
-    def update_affiliation(self):
+    def update_affiliation(self, authorId_first_year):
         """
         paper-specific properties --> affiliation-specific properties
         :return:
@@ -541,6 +544,28 @@ class Affiliation:
                 self.year_authorId_citations_three2sixauthor[year][authorId] = sum(self.year_authorId_paperId_citations_three2sixauthor[year][authorId].values())
                 self.year_authorId_avg_impact_three2sixauthor[year][authorId] = 0 if len(self.year_authorId_paperId_citations_three2sixauthor[year][authorId]) == 0 \
                     else self.year_authorId_citations_three2sixauthor[year][authorId] / len(self.year_authorId_paperId_citations_three2sixauthor[year][authorId])
+
+        # seniority
+        for year in self.year_authorIds:
+            authorIds = self.year_authorIds[year]
+            for authorId in authorIds:
+                seniority = get_seniority(authorId_first_year, authorId, year)
+                if seniority >= 5:
+                    if year not in self.year_authorIds_5:
+                        self.year_authorIds_5[year] = 0
+                    self.year_authorIds_5[year] += 1
+                if seniority >= 10:
+                    if year not in self.year_authorIds_10:
+                        self.year_authorIds_10[year] = 0
+                    self.year_authorIds_10[year] += 1
+                if seniority >= 15:
+                    if year not in self.year_authorIds_15:
+                        self.year_authorIds_15[year] = 0
+                    self.year_authorIds_15[year] += 1
+                if seniority >= 20:
+                    if year not in self.year_authorIds_20:
+                        self.year_authorIds_20[year] = 0
+                    self.year_authorIds_20[year] += 1
 
         # release the memory of paper-specific properties that will not be used anymore
         self.year_paperId_authorIds = {}

@@ -1,5 +1,6 @@
 # definition of author entities
 
+
 class Author:
     def __init__(self, author_name, authorId, aff_name, affId):
         self.author_name = author_name
