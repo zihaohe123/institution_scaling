@@ -7,6 +7,7 @@ sys.path.append('..')
 import time
 from utils.directories import *
 from utils.pkl_io import open_pkl_file, save_pkl_file
+import argparse
 
 
 def is_valid_paper(paper_entity):
@@ -30,10 +31,19 @@ def is_valid_paper(paper_entity):
 
 
 if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--fos', default='physics', type=str, choices=('physics', 'cs', 'sociology', 'math'),
+                      help='field of study')
+    args = parser.parse_args()
+    print(args.fos)
+    directories = Directory(args.fos)
+    directories.refresh()
+
+
     valid_paperIds = set()
     num = 0
-    for filename in os.listdir(directory_mag_data):
-        paper_entities = open_pkl_file(directory_mag_data, filename[0:-4])
+    for filename in os.listdir(directories.directory_mag_data):
+        paper_entities = open_pkl_file(directories.directory_mag_data, filename[0:-4])
         for paper_entity in paper_entities:
             num += 1
             if num % 1000 == 0:
@@ -41,4 +51,4 @@ if __name__ == '__main__':
             if not is_valid_paper(paper_entity):
                 continue
             valid_paperIds.add(paper_entity['Id'])
-    save_pkl_file(directory_dataset_description, 'paperIds', valid_paperIds)
+    save_pkl_file(directories.directory_dataset_description, 'paperIds', valid_paperIds)

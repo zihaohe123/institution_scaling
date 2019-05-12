@@ -10,13 +10,13 @@ from utils.directories import *
 import time
 import math
 import threading
+import argparse
 
-authorId_first_year = open_pkl_file(directory_dataset_description, 'authorId_first_year')
 
 # add multiple papers to an affiliation
-def construct_affiliations_from_papers(paperIds, affId):
+def construct_affiliations_from_papers(paperIds, affId, field_of_study):
     aff_name = ''
-    paper0 = open_paper(paperIds[0])
+    paper0 = open_paper(paperIds[0], field_of_study)
     for author in paper0.authors:
         if author.affId == affId:
             aff_name = author.aff_name
@@ -25,7 +25,7 @@ def construct_affiliations_from_papers(paperIds, affId):
     affiliation = Affiliation(affId, aff_name)
 
     for paperId in paperIds:
-        paper = open_paper(paperId)
+        paper = open_paper(paperId, field_of_study)
         year = paper.year
         authors = paper.authors
         contribution = paper.aff_contribution[affId]
@@ -113,11 +113,22 @@ def construct_affiliations(affId_paperIds, affIds, m, n):
 
 
 if __name__ == '__main__':
-    affId_paperIds = open_pkl_file(directory_dataset_description, 'affId_paperIds')
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--fos', default='physics', type=str, choices=('physics', 'cs', 'sociology', 'math'),
+                      help='field of study')
+    args = parser.parse_args()
+    print(args.fos)
+    directories = Directory(args.fos)
+    directories.refresh()
+
+
+    affId_paperIds = open_pkl_file(directories.directory_dataset_description, 'affId_paperIds')
     affIds = list(affId_paperIds.keys())
     print(len(affIds))
     threads = []
     thread_num = 20
+
+    authorId_first_year = open_pkl_file(directories.directory_dataset_description, 'authorId_first_year')
 
     for i in range(thread_num):
         threads.append(threading.Thread(target=construct_affiliations, args=(affId_paperIds, affIds, thread_num, i+1)))

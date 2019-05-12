@@ -3,18 +3,33 @@ sys.path.append('..')
 from utils.entity_io import open_affiliation, open_pkl_file
 from utils.directories import *
 import pandas as pd
-import numpy as np
+import tarfile
+import argparse
+
+
+def make_targz(output_filename, source_dir):
+    with tarfile.open(output_filename, "w:gz") as tar:
+        tar.add(source_dir, arcname=os.path.basename(source_dir))
 
 
 if __name__ == '__main__':
-    affIds = open_pkl_file(directory_dataset_description, 'affIds')
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--fos', default='physics', type=str, choices=('physics', 'cs', 'sociology', 'math'),
+                        help='field of study')
+    args = parser.parse_args()
+    directories = Directory(args.fos)
+    directories.refresh()
+
+
+    print(directories.directory_dataset_description)
+    affIds = open_pkl_file(directories.directory_dataset_description, 'affIds')
     length = len(affIds)
     num = 0
     for affId in affIds:
         num += 1
         print('{}/{}'.format(num, length))
         data = []
-        affiliation = open_affiliation(affId)
+        affiliation = open_affiliation(affId, args.fos)
         years = list(affiliation.year_size.keys())
         years.sort(reverse=True)
         for year in years:
@@ -52,5 +67,9 @@ if __name__ == '__main__':
                                          'cumul_production', 'cumul_productivity',
                                          'seniority_5', 'seniority_10',
                                          'seniority_15', 'seniority_20'])
-        path = os.path.join(directory_institution_description, '{}.csv'.format(affId))
+        path = os.path.join(directories.directory_institution_description, '{}.csv'.format(affId))
         df.to_csv(path, index=False)
+
+    directories.refresh()
+    make_targz(os.path.join(directories.directory_dataset_description, 'institution_description.tar.gz'),
+               directories.directory_institution_description)

@@ -19,43 +19,48 @@ def prepare_dir(path):
             os.remove(os.path.join(path, '123.txt'))
 
 
-directory_root = ['/data/libo/hezihao/institutions_scaling/',
-                  "C:/Users/hezh/Documents/OneDrive/2018USC-ISI/institution_scaling"][0]
+class Directory:
+    def __init__(self, field_of_study):
+        self.directory_root = ['/data/libo/hezihao/institutions_scaling/',
+                               "C:/Users/hezh/Documents/OneDrive/2018USC-ISI/institution_scaling"][0]
 
-field_of_study = ('physics', 'computer_science', 'mathematics', 'sociology')[2]
+        self.field_of_study = {'physics': 'physics',
+                               'cs': 'computer_science',
+                               'math': 'mathematics',
+                               'sociology': 'sociology'}[field_of_study]
 
+        self.directory_data = os.path.join(self.directory_root, 'data', self.field_of_study)
+        self.directory_papers = os.path.join(self.directory_data, 'papers')
+        self.directory_mag_data = os.path.join(self.directory_data, 'mag_data')
+        self.directory_institutions = os.path.join(self.directory_data, 'institutions')
 
-directory_data = os.path.join(directory_root, 'data', field_of_study)
-directory_papers = os.path.join(directory_data, 'papers')
-directory_mag_data = os.path.join(directory_data, 'mag_data')
-directory_institutions = os.path.join(directory_data, 'institutions')
+        self.directory_results = os.path.join(self.directory_root, 'results', self.field_of_study)
+        self.directory_dataset_description = os.path.join(self.directory_results, 'dataset_description')
+        self.directory_scaling_with_institution_size = os.path.join(self.directory_results, 'scaling_with_institution_size')
+        self.directory_scaling_with_collaborations = os.path.join(self.directory_results, 'scaling_with_collaborations')
+        self.directory_urn_model = os.path.join(self.directory_results, 'urn_model')
+        self.directory_collab_of_institutions = os.path.join(self.directory_dataset_description, 'collab_of_institutions')
+        self.directory_institution_description = os.path.join(self.directory_dataset_description, 'institution_description')
+        self.directory_author_collab = os.path.join(self.directory_dataset_description, 'author_collab')
 
-directory_results = os.path.join(directory_root, 'results', field_of_study)
-directory_dataset_description = os.path.join(directory_results, 'dataset_description')
-directory_scaling_with_institution_size = os.path.join(directory_results, 'scaling_with_institution_size')
-directory_scaling_with_collaborations = os.path.join(directory_results, 'scaling_with_collaborations')
-directory_urn_model = os.path.join(directory_results, 'urn_model')
-directory_collab_of_institutions = os.path.join(directory_dataset_description, 'collab_of_institutions')
-directory_institution_description = os.path.join(directory_dataset_description, 'institution_description')
-directory_author_collab = os.path.join(directory_dataset_description, 'author_collab')
+        self.directory_figures = os.path.join(self.directory_root, 'figures', self.field_of_study)
 
-directory_figures = os.path.join(directory_root, 'figures', field_of_study)
+        self.directories = [self.directory_data,
+                            self.directory_papers,
+                            self.directory_mag_data,
+                            self.directory_institutions,
+                            self.directory_results,
+                            self.directory_dataset_description,
+                            self.directory_scaling_with_institution_size,
+                            self.directory_scaling_with_collaborations,
+                            self.directory_urn_model,
+                            self.directory_collab_of_institutions,
+                            self.directory_institution_description,
+                            self.directory_author_collab,
+                            self.directory_figures,
+                            ]
 
-directories = [directory_data,
-               directory_papers,
-               directory_mag_data,
-               directory_institutions,
-               directory_results,
-               directory_dataset_description,
-               directory_scaling_with_institution_size,
-               directory_scaling_with_collaborations,
-               directory_urn_model,
-               directory_collab_of_institutions,
-               directory_institution_description,
-               directory_figures,
-               directory_author_collab]
-
-if __name__ == '__main__':
-    for directory in directories:
-        make_dir(directory)
-        prepare_dir(directory)
+    def refresh(self):
+        for directory in self.directories:
+            make_dir(directory)
+            prepare_dir(directory)

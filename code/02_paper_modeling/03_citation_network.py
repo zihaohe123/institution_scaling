@@ -7,12 +7,22 @@ sys.path.append('..')
 import time
 from utils.pkl_io import open_pkl_file, save_pkl_file
 from utils.directories import *
+import argparse
 
 
 if __name__ == '__main__':
-    paperId_year = open_pkl_file(directory_dataset_description, 'paperId_year')
-    paperId_references = open_pkl_file(directory_dataset_description, 'paperId_references')
-    paperIds = open_pkl_file(directory_dataset_description, 'paperIds')
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--fos', default='physics', type=str, choices=('physics', 'cs', 'sociology', 'math'),
+                      help='field of study')
+    args = parser.parse_args()
+    print(args.fos)
+    directories = Directory(args.fos)
+    directories.refresh()
+
+
+    paperId_year = open_pkl_file(directories.directory_dataset_description, 'paperId_year')
+    paperId_references = open_pkl_file(directories.directory_dataset_description, 'paperId_references')
+    paperIds = open_pkl_file(directories.directory_dataset_description, 'paperIds')
 
     num = 0
     cited_paper_citing_papers = {}
@@ -30,4 +40,4 @@ if __name__ == '__main__':
                 cited_paper_citing_papers[cited_paperId] = set()
             cited_paper_citing_papers[cited_paperId].add(citing_paperId)
 
-    save_pkl_file(directory_dataset_description, 'cited_paper_citing_papers', cited_paper_citing_papers)
+    save_pkl_file(directories.directory_dataset_description, 'cited_paper_citing_papers', cited_paper_citing_papers)

@@ -6,15 +6,23 @@ sys.path.append('..')
 from utils.directories import *
 from utils.pkl_io import open_pkl_file, save_pkl_file
 import time
+import argparse
 
 if __name__ == '__main__':
-    paperIds = open_pkl_file(directory_dataset_description, 'paperIds')
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--fos', default='physics', type=str, choices=('physics', 'cs', 'sociology', 'math'),
+                        help='field of study')
+    args = parser.parse_args()
+    print(args.fos)
+    directories = Directory(args.fos)
+
+    paperIds = open_pkl_file(directories.directory_dataset_description, 'paperIds')
     authorId_sequence = []  # (authorId, date)
     affId_sequence = []  # (affId, date)
 
     num = 0
-    for filename in os.listdir(directory_mag_data):
-        paper_entities = open_pkl_file(directory_mag_data, filename[0:-4])
+    for filename in os.listdir(directories.directory_mag_data):
+        paper_entities = open_pkl_file(directories.directory_mag_data, filename[0:-4])
         for paper_entity in paper_entities:
             num += 1
             if num % 1000 == 0:
@@ -37,6 +45,6 @@ if __name__ == '__main__':
     authorId_sequence.sort(key=lambda t: t[1])
     affId_sequence.sort(key=lambda t: t[1])
 
-    save_pkl_file(directory_urn_model, 'ordered_authorId_sequence', authorId_sequence)
-    save_pkl_file(directory_urn_model, 'ordered_affId_sequence', affId_sequence)
+    save_pkl_file(directories.directory_urn_model, 'ordered_authorId_sequence', authorId_sequence)
+    save_pkl_file(directories.directory_urn_model, 'ordered_affId_sequence', affId_sequence)
 

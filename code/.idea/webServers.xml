@@ -2,7 +2,7 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="d6c6ae80-2648-4738-988e-172a52951018" name="shenzhen-131" url="http://219.223.189.131">
+      <webServer id="d6c6ae80-2648-4738-988e-172a52951018" name="shenzhen-131 (project level)" url="http://219.223.189.131">
         <fileTransfer host="219.223.189.131" port="22" rootFolder="/data/libo/hezihao" accessType="SFTP">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />

@@ -9,9 +9,10 @@ from utils.directories import *
 from entities.paper import *
 from entities.author import *
 import time
+import argparse
 
 
-def read_paper(paper_file, citations):
+def read_paper(paper_file, citations, field_of_study):
     paperId = paper_file['Id']
     title = paper_file['Ti']
     year = int(paper_file['Y'])
@@ -33,15 +34,24 @@ def read_paper(paper_file, citations):
                   references=references,
                   citations=citations
                   )
-    save_paper(paperId, paper)
+    save_paper(paperId, paper, field_of_study)
 
 
 if __name__ == '__main__':
-    paperIds = open_pkl_file(directory_dataset_description, 'paperIds')
-    cited_paper_citing_papers = open_pkl_file(directory_dataset_description, 'cited_paper_citing_papers')
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--fos', default='physics', type=str, choices=('physics', 'cs', 'sociology', 'math'),
+                      help='field of study')
+    args = parser.parse_args()
+    print(args.fos)
+    directories = Directory(args.fos)
+    directories.refresh()
+
+
+    paperIds = open_pkl_file(directories.directory_dataset_description, 'paperIds')
+    cited_paper_citing_papers = open_pkl_file(directories.directory_dataset_description, 'cited_paper_citing_papers')
     num = 0
-    for filename in os.listdir(directory_mag_data):
-        paper_entities = open_pkl_file(directory_mag_data, filename[0:-4])
+    for filename in os.listdir(directories.directory_mag_data):
+        paper_entities = open_pkl_file(directories.directory_mag_data, filename[0:-4])
         for paper_entity in paper_entities:
             num += 1
             if num % 1000 == 0:
@@ -50,4 +60,4 @@ if __name__ == '__main__':
             if paperId not in paperIds:
                 continue
             citations = len(cited_paper_citing_papers[paperId]) if paperId in cited_paper_citing_papers else 0
-            read_paper(paper_entity, citations)
+            read_paper(paper_entity, citations, args.fos)

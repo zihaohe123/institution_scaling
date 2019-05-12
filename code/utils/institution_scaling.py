@@ -9,15 +9,16 @@ from utils.plotting import line_plot, curve_plot, histogram_plot
 import pandas as pd
 
 
-def cross_institution_scaling(property_x, property_y, filepath, filename):
+def cross_institution_scaling(property_x, property_y, filepath, filename, field_of_study):
+    directories = Directory(field_of_study)
 
-    fig_filepath = os.path.join(directory_figures, '{}_vs_{}'.format(property_y, property_x))
+    fig_filepath = os.path.join(directories.directory_figures, '{}_vs_{}'.format(property_y, property_x))
     make_dir(fig_filepath)
 
-    affIds = open_pkl_file(directory_dataset_description, 'affIds')
+    affIds = open_pkl_file(directories.directory_dataset_description, 'affIds')
     year_x_y = {}
     for affId in affIds:
-        affiliation = open_affiliation(affId)
+        affiliation = open_affiliation(affId, field_of_study)
         X = getattr(affiliation, property_x)
         Y = getattr(affiliation, property_y)
 
@@ -70,16 +71,19 @@ def cross_institution_scaling(property_x, property_y, filepath, filename):
     save_pkl_file(filepath, filename, year_alpha_and_r2_dict)
 
 
-def within_institution_scaling(property_x, property_y, filepath, filename):
-    fig_filepath = os.path.join(directory_figures, '{}_vs_{}'.format(property_y, property_x))
+def within_institution_scaling(property_x, property_y, filepath, filename, field_of_study):
+    directories = Directory(field_of_study)
+
+
+    fig_filepath = os.path.join(directories.directory_figures, '{}_vs_{}'.format(property_y, property_x))
     make_dir(fig_filepath)
 
-    affIds = open_pkl_file(directory_dataset_description, 'affIds')
+    affIds = open_pkl_file(directories.directory_dataset_description, 'affIds')
     affId_x_y = {}
     affId_affname = []
 
     for affId in affIds:
-        affiliation = open_affiliation(affId)
+        affiliation = open_affiliation(affId, field_of_study)
         sizes = np.array(list(affiliation.year_size.values()))
         if sizes.max() - sizes.min() < 50:
             continue
@@ -113,17 +117,17 @@ def within_institution_scaling(property_x, property_y, filepath, filename):
         if np.isnan(slope):
             continue
         valid_affIds.append(affId)
-        affiliation = open_affiliation(affId)
+        affiliation = open_affiliation(affId, field_of_study)
         aff_name = affiliation.aff_name
 
         affId_alpha_and_R2.append([aff_name, slope, r2])
         affId_alpha_and_R2_dict[aff_name] = (slope, r2)
 
         # make the plots (linear regression)
-        if 'Harvard' in open_affiliation(affId).aff_name and not np.isnan(slope):
+        if 'Harvard' in open_affiliation(affId, field_of_study).aff_name and not np.isnan(slope):
             xlabel = property_x
-            ylabel = '{} in {}'.format(property_y, open_affiliation(affId).aff_name)
-            fig_filename = '{}_vs_{}_in_{}_within'.format(property_y, property_x, open_affiliation(affId).aff_name)
+            ylabel = '{} in {}'.format(property_y, open_affiliation(affId, field_of_study).aff_name)
+            fig_filename = '{}_vs_{}_in_{}_within'.format(property_y, property_x, open_affiliation(affId, field_of_study).aff_name)
             line_plot(x_y[:, 0], x_y[:, 1], slope, intercept, r2, xlabel, ylabel, fig_filepath, fig_filename)
 
     hist_filename = '{}_vs_{}_hist_within'.format(property_y, property_x)
@@ -136,14 +140,15 @@ def within_institution_scaling(property_x, property_y, filepath, filename):
         pd.DataFrame(affId_alpha_and_R2).to_excel(writer, sheet_name='alpha_and_R2_in_each_aff',
                                                   header=['year', 'alpha', 'R2'], index=False)
         for affId in valid_affIds:
-            affiliation = open_affiliation(affId)
-            aff_name = affiliation.aff_name[:min(29, len(aff_name))]
+            affiliation = open_affiliation(affId, field_of_study)
+            aff_name = affiliation.aff_name
+            aff_name = aff_name[:min(29, len(aff_name))]
             pd.DataFrame(affId_x_y[affId]).to_excel(writer, sheet_name=aff_name,
                                                     header=[property_x, property_y, 'year'], index=False)
 
     save_pkl_file(filepath, filename, affId_alpha_and_R2_dict)
 
 
-def cross_and_within_institution_scaling(property_x, property_y, filepath, filename):
-    cross_institution_scaling(property_x, property_y, filepath, filename+'_cross')
-    within_institution_scaling(property_x, property_y, filepath, filename+'_within')
+def cross_and_within_institution_scaling(property_x, property_y, filepath, filename, field_of_study):
+    cross_institution_scaling(property_x, property_y, filepath, filename+'_cross', field_of_study)
+    within_institution_scaling(property_x, property_y, filepath, filename+'_within', field_of_study)

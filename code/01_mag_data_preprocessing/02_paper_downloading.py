@@ -12,11 +12,10 @@ import numpy as np
 from utils.microsoft_academic_makes import *
 from utils.pkl_io import open_pkl_file, save_pkl_file
 from utils.directories import *
+import argparse
 
-year_num = open_pkl_file(directory_dataset_description, 'year_papernum')
-years = list(year_num.keys())
 
-def paper_downloading(groups_num, group_num):
+def paper_downloading(years, groups_num, group_num, directory_mag_data, field_of_study):
 
     length = math.ceil(len(years) / groups_num)
     start = (group_num - 1) * length
@@ -36,16 +35,32 @@ def paper_downloading(groups_num, group_num):
             save_pkl_file(directory_mag_data, 'paper_entities_{}_{}'.format(year, offset), paper_entities)
 
 
-rd.shuffle(years)
-thread_num = 20
-threads = []
+if __name__ == '__main__':
 
-for i in range(thread_num):
-    threads.append(threading.Thread(target=paper_downloading, args=(thread_num, i+1)))
-for t in threads:
-    t.setDaemon(True)
-    t.start()
-for t in threads:
-    t.join()
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--fos', default='physics', type=str, choices=('physics', 'cs', 'sociology', 'math'),
+                      help='field of study')
+    args = parser.parse_args()
+    print(args.fos)
+    directories = Directory(args.fos)
+    directories.refresh()
+
+
+    year_num = open_pkl_file(directories.directory_dataset_description, 'year_papernum')
+    years = list(year_num.keys())
+
+    rd.shuffle(years)
+    thread_num = 20
+    threads = []
+
+    for i in range(thread_num):
+        threads.append(threading.Thread(target=paper_downloading, args=(years, thread_num, i+1,
+                                                                        directories.directory_mag_data,
+                                                                        directories.field_of_study)))
+    for t in threads:
+        t.setDaemon(True)
+        t.start()
+    for t in threads:
+        t.join()
 
 

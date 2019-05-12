@@ -2,7 +2,21 @@
 <project version="4">
   <component name="PublishConfigData" autoUpload="Always" serverName="shenzhen-131" showDialogOnRemoteDnD="false">
     <serverData>
+      <paths name="didi-hezihao">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="shenzhen-131">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/institutions_scaling/code" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="shenzhen-131 (project level)">
         <serverdata>
           <mappings>
             <mapping deploy="/institutions_scaling/code" local="$PROJECT_DIR$" web="/" />
