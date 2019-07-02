@@ -461,7 +461,7 @@ class Affiliation:
                 self.year_authorId_avg_impact[year] = {}
             for authorId in self.year_authorId_paperId_citations[year]:
                 self.year_authorId_citations[year][authorId] = sum(self.year_authorId_paperId_citations[year][authorId].values())
-                self.year_authorId_avg_impact[year] = 0 if len(self.year_authorId_paperId_citations[year][authorId]) == 0 \
+                self.year_authorId_avg_impact[year][authorId] = 0 if len(self.year_authorId_paperId_citations[year][authorId]) == 0 \
                     else self.year_authorId_citations[year][authorId] / len(self.year_authorId_paperId_citations[year][authorId])
 
         # citations and average impact of one-author papers

@@ -20,8 +20,6 @@ if __name__ == '__main__':
     directories = Directory(args.fos)
     directories.refresh()
 
-
-    print(directories.directory_dataset_description)
     affIds = open_pkl_file(directories.directory_dataset_description, 'affIds')
     length = len(affIds)
     num = 0

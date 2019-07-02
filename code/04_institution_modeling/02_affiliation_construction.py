@@ -92,11 +92,11 @@ def construct_affiliations_from_papers(paperIds, affId, field_of_study):
                               )
 
     affiliation.update_affiliation(authorId_first_year)
-    save_affiliation(affId, affiliation)
+    save_affiliation(affId, affiliation, field_of_study)
 
 
 # construct affiliations with multi-threading, n out of m threads
-def construct_affiliations(affId_paperIds, affIds, m, n):
+def construct_affiliations(affId_paperIds, affIds, m, n, field_of_study):
     affnum = len(affIds)
     length = math.ceil(affnum / m)
     start = (n - 1) * length
@@ -109,7 +109,7 @@ def construct_affiliations(affId_paperIds, affIds, m, n):
         if num % 100 == 0:
             print(n, ',', num, '/', length, ',', time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
         paperIds = affId_paperIds[affId]
-        construct_affiliations_from_papers(paperIds, affId)
+        construct_affiliations_from_papers(paperIds, affId, field_of_study)
 
 
 if __name__ == '__main__':
@@ -121,7 +121,6 @@ if __name__ == '__main__':
     directories = Directory(args.fos)
     directories.refresh()
 
-
     affId_paperIds = open_pkl_file(directories.directory_dataset_description, 'affId_paperIds')
     affIds = list(affId_paperIds.keys())
     print(len(affIds))
@@ -131,7 +130,7 @@ if __name__ == '__main__':
     authorId_first_year = open_pkl_file(directories.directory_dataset_description, 'authorId_first_year')
 
     for i in range(thread_num):
-        threads.append(threading.Thread(target=construct_affiliations, args=(affId_paperIds, affIds, thread_num, i+1)))
+        threads.append(threading.Thread(target=construct_affiliations, args=(affId_paperIds, affIds, thread_num, i+1, args.fos)))
     for t in threads:
         t.setDaemon(True)
         t.start()

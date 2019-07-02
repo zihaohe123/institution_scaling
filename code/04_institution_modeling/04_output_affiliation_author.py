@@ -41,7 +41,7 @@ if __name__ == '__main__':
                 external_collab = affiliation.year_authorId_external_collab[year][authorId]
                 indiv_collab = affiliation.year_authorId_indiv_collab[year][authorId]
                 avg_teamsize = affiliation.year_authorId_avg_teamsize[year][authorId]
-                avg_impact = affiliation.year_authorId_indiv_collab[year][authorId]
+                avg_impact = affiliation.year_authorId_avg_impact[year][authorId]
                 if year in affiliation.year_authorId_avg_impact_oneauthor and authorId in affiliation.year_authorId_avg_impact_oneauthor[year]:
                     avg_impact_oneauthor = affiliation.year_authorId_avg_impact_oneauthor[year][authorId]
                 else:
