@@ -211,7 +211,7 @@ class Affiliation:
         if year not in self.year_authorId_paperId_citations:
             self.year_authorId_paperId_citations[year] = {}
         for authorId in authorIds:
-            if authorId not in self.year_authorId_paperId_citations:
+            if authorId not in self.year_authorId_paperId_citations[year]:
                 self.year_authorId_paperId_citations[year][authorId] = {}
             self.year_authorId_paperId_citations[year][authorId][paperId] = citations
 
@@ -224,7 +224,7 @@ class Affiliation:
             if year not in self.year_authorId_paperId_citations_oneauthor:
                 self.year_authorId_paperId_citations_oneauthor[year] = {}
             for authorId in authorIds:
-                if authorId not in self.year_authorId_paperId_citations_oneauthor:
+                if authorId not in self.year_authorId_paperId_citations_oneauthor[year]:
                     self.year_authorId_paperId_citations_oneauthor[year][authorId] = {}
                 self.year_authorId_paperId_citations_oneauthor[year][authorId][paperId] = citations
 
@@ -237,7 +237,7 @@ class Affiliation:
             if year not in self.year_authorId_paperId_citations_twoauthor:
                 self.year_authorId_paperId_citations_twoauthor[year] = {}
             for authorId in authorIds:
-                if authorId not in self.year_authorId_paperId_citations_twoauthor:
+                if authorId not in self.year_authorId_paperId_citations_twoauthor[year]:
                     self.year_authorId_paperId_citations_twoauthor[year][authorId] = {}
                 self.year_authorId_paperId_citations_twoauthor[year][authorId][paperId] = citations
 
@@ -249,7 +249,7 @@ class Affiliation:
             if year not in self.year_authorId_paperId_citations_threeauthor:
                 self.year_authorId_paperId_citations_threeauthor[year] = {}
             for authorId in authorIds:
-                if authorId not in self.year_authorId_paperId_citations_threeauthor:
+                if authorId not in self.year_authorId_paperId_citations_threeauthor[year]:
                     self.year_authorId_paperId_citations_threeauthor[year][authorId] = {}
                 self.year_authorId_paperId_citations_threeauthor[year][authorId][paperId] = citations
 
@@ -262,7 +262,7 @@ class Affiliation:
             if year not in self.year_authorId_paperId_citations_onetwoauthor:
                 self.year_authorId_paperId_citations_onetwoauthor[year] = {}
             for authorId in authorIds:
-                if authorId not in self.year_authorId_paperId_citations_onetwoauthor:
+                if authorId not in self.year_authorId_paperId_citations_onetwoauthor[year]:
                     self.year_authorId_paperId_citations_onetwoauthor[year][authorId] = {}
                 self.year_authorId_paperId_citations_onetwoauthor[year][authorId][paperId] = citations
 
@@ -275,7 +275,7 @@ class Affiliation:
             if year not in self.year_authorId_paperId_citations_three2sixauthor:
                 self.year_authorId_paperId_citations_three2sixauthor[year] = {}
             for authorId in authorIds:
-                if authorId not in self.year_authorId_paperId_citations_three2sixauthor:
+                if authorId not in self.year_authorId_paperId_citations_three2sixauthor[year]:
                     self.year_authorId_paperId_citations_three2sixauthor[year][authorId] = {}
                 self.year_authorId_paperId_citations_three2sixauthor[year][authorId][paperId] = citations
 
@@ -463,6 +463,8 @@ class Affiliation:
                 self.year_authorId_citations[year][authorId] = sum(self.year_authorId_paperId_citations[year][authorId].values())
                 self.year_authorId_avg_impact[year][authorId] = 0 if len(self.year_authorId_paperId_citations[year][authorId]) == 0 \
                     else self.year_authorId_citations[year][authorId] / len(self.year_authorId_paperId_citations[year][authorId])
+                # if len(self.year_authorId_paperId_citations[year][authorId]) != 1:
+                #     print(self.year_authorId_citations[year][authorId], len(self.year_authorId_paperId_citations[year][authorId]))
 
         # citations and average impact of one-author papers
         for year in self.year_paperId_citations_oneauthor:

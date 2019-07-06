@@ -5,11 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="244e1e0a-94ea-4eaa-a0c8-46a93af98ef1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/code2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/code2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/other.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_institution_modeling/02_affiliation_construction.py" beforeDir="false" afterPath="$PROJECT_DIR$/04_institution_modeling/02_affiliation_construction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_institution_modeling/03_output_affiliation.py" beforeDir="false" afterPath="$PROJECT_DIR$/04_institution_modeling/03_output_affiliation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_mag_data_preprocessing/01_year_papernum.py" beforeDir="false" afterPath="$PROJECT_DIR$/01_mag_data_preprocessing/01_year_papernum.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_mag_data_preprocessing/02_paper_downloading.py" beforeDir="false" afterPath="$PROJECT_DIR$/01_mag_data_preprocessing/02_paper_downloading.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02_paper_modeling/01_paper_cleaning.py" beforeDir="false" afterPath="$PROJECT_DIR$/02_paper_modeling/01_paper_cleaning.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02_paper_modeling/02_paper_references.py" beforeDir="false" afterPath="$PROJECT_DIR$/02_paper_modeling/02_paper_references.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02_paper_modeling/03_citation_network.py" beforeDir="false" afterPath="$PROJECT_DIR$/02_paper_modeling/03_citation_network.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02_paper_modeling/04_paper_construction.py" beforeDir="false" afterPath="$PROJECT_DIR$/02_paper_modeling/04_paper_construction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03_author_modeling/authorId_first_year.py" beforeDir="false" afterPath="$PROJECT_DIR$/03_author_modeling/authorId_first_year.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/04_institution_modeling/04_output_affiliation_author.py" beforeDir="false" afterPath="$PROJECT_DIR$/04_institution_modeling/04_output_affiliation_author.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/entities/affiliation.py" beforeDir="false" afterPath="$PROJECT_DIR$/entities/affiliation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities/author.py" beforeDir="false" afterPath="$PROJECT_DIR$/entities/author.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities/paper.py" beforeDir="false" afterPath="$PROJECT_DIR$/entities/paper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scaling_with_collaborations.py" beforeDir="false" afterPath="$PROJECT_DIR$/scaling_with_collaborations.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scaling_with_institution_size.py" beforeDir="false" afterPath="$PROJECT_DIR$/scaling_with_institution_size.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/urn_model/01_authorId_sequence&amp;affId_sequence.py" beforeDir="false" afterPath="$PROJECT_DIR$/urn_model/01_authorId_sequence&amp;affId_sequence.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/urn_model/02_author_institution_sequence.py" beforeDir="false" afterPath="$PROJECT_DIR$/urn_model/02_author_institution_sequence.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/urn_model/model_occurrences_of_hires.py" beforeDir="false" afterPath="$PROJECT_DIR$/urn_model/model_occurrences_of_hires.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/directories.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/directories.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/entity_io.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/entity_io.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/institution_scaling.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/institution_scaling.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/linear_regression.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/linear_regression.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/microsoft_academic_makes.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/microsoft_academic_makes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/pkl_io.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/pkl_io.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/plotting.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/plotting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/seniority.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/seniority.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../results/physics/urn_model/pkl_file_example.py" beforeDir="false" afterPath="$PROJECT_DIR$/../results/physics/urn_model/pkl_file_example.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,8 +82,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/04_institution_modeling/02_affiliation_construction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1596">
-              <caret line="127" column="19" lean-forward="true" selection-start-line="127" selection-start-column="19" selection-end-line="127" selection-end-column="19" />
+            <state relative-caret-position="1787">
+              <caret line="108" column="26" lean-forward="true" selection-start-line="108" selection-start-column="26" selection-end-line="108" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -59,8 +91,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/04_institution_modeling/04_output_affiliation_author.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="43" column="65" selection-start-line="43" selection-start-column="41" selection-end-line="43" selection-end-column="65" />
+            <state relative-caret-position="427">
+              <caret line="46" column="47" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/entities/affiliation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="8854">
+              <caret line="467" selection-start-line="467" selection-end-line="468" selection-end-column="59" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -87,13 +131,16 @@
       <find>legend</find>
       <find>teamsize</find>
       <find>year_size</find>
-      <find>print</find>
       <find>year_authorId_paperIds</find>
       <find>year_authorId_avg_impact_oneauthor</find>
       <find>authorId_internal_collab</find>
       <find>year_authorId_paperId_internal_collab</find>
       <find>year_authorIds</find>
       <find>year_authorId_avg_impact</find>
+      <find>year_authorId_paperId_citations</find>
+      <find>avg_impact</find>
+      <find>authorId_avg</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -156,9 +203,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="3240" />
-    <option name="height" value="2160" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -178,12 +225,27 @@
             <path>
               <item name="code" type="b2602c69:ProjectViewProjectNode" />
               <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="02_paper_modeling" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="03_author_modeling" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
               <item name="04_institution_modeling" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="code" type="b2602c69:ProjectViewProjectNode" />
               <item name="code" type="462c0819:PsiDirectoryNode" />
               <item name="05_dataset_description" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -399,12 +461,15 @@
       <workItem from="1557492298655" duration="2705000" />
       <workItem from="1557501213606" duration="6164000" />
       <workItem from="1557630308564" duration="13278000" />
-      <workItem from="1561962473375" duration="2429000" />
+      <workItem from="1561962473375" duration="8659000" />
+      <workItem from="1562333612889" duration="653000" />
+      <workItem from="1562371053587" duration="342000" />
+      <workItem from="1562424645281" duration="85000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="315199000" />
+    <option name="totallyTimeSpent" value="324994000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -416,9 +481,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1633" height="1053" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49867374" visible="true" weight="0.14285715" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49867374" weight="0.13968255" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50132626" side_tool="true" weight="0.11174603" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -430,15 +496,15 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="File Transfer" order="9" sideWeight="0.49946752" visible="true" weight="0.097613886" />
+      <window_info anchor="bottom" id="File Transfer" order="9" sideWeight="0.49946752" visible="true" weight="0.1670282" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.17425743" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5005325" side_tool="true" weight="0.24653466" />
-      <window_info anchor="bottom" id="Python Console" order="13" weight="0.14967462" />
+      <window_info anchor="bottom" id="Python Console" order="13" weight="0.27006507" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="Remote Host" order="3" visible="true" weight="0.19301587" />
+      <window_info anchor="right" id="Remote Host" order="3" weight="0.21745351" />
       <window_info anchor="right" id="SciView" order="4" weight="0.1784127" />
       <window_info anchor="right" id="Database" order="5" weight="0.32896462" />
     </layout>
@@ -661,16 +727,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/entities/affiliation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="919">
-          <caret line="470" column="81" selection-start-line="470" selection-start-column="81" selection-end-line="470" selection-end-column="81" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/seniority.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -712,17 +768,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/entities/affiliation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8854">
+          <caret line="467" selection-start-line="467" selection-end-line="468" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/04_institution_modeling/02_affiliation_construction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1596">
-          <caret line="127" column="19" lean-forward="true" selection-start-line="127" selection-start-column="19" selection-end-line="127" selection-end-column="19" />
+        <state relative-caret-position="1787">
+          <caret line="108" column="26" lean-forward="true" selection-start-line="108" selection-start-column="26" selection-end-line="108" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/04_institution_modeling/04_output_affiliation_author.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="43" column="65" selection-start-line="43" selection-start-column="41" selection-end-line="43" selection-end-column="65" />
+        <state relative-caret-position="427">
+          <caret line="46" column="47" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="47" />
         </state>
       </provider>
     </entry>
